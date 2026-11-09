@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="zh-CN" data-title-zh="商务合作｜技术合作与技术转让 · 国际医疗活动组织 | Global Health" data-title-en="Partnership | Technology Cooperation and Transfer · International Medical Events | Global Health">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>商务合作｜技术合作与技术转让 · 国际医疗活动组织 | Global Health</title>
+<meta name="description" content="面向中国医疗机构与投资方的技术合作、技术转让、合资落地，以及中日美国际医疗活动组织。">
+<style>
+:root{
+  --ink:#1b1b16;--ink-2:#262620;--ink-3:#33332b;
+  --paper:#fbf8f1;--paper-2:#f3ece0;--paper-3:#e7ddcb;
+  --zhe:#9a5f3a;--zhe-l:#bb7d54;--zhu:#5c6e58;--jiang:#c08a3e;--zhu-s:#a8332c;
+  --mute:#6f6a5e;--mute-l:#a49e90;
+  --line:rgba(27,27,22,.14);--line-d:rgba(251,248,241,.17);
+  --serif:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC","Hiragino Mincho ProN","Yu Mincho",SimSun,Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,"Segoe UI",sans-serif;
+  --mono:"SF Mono",ui-monospace,Menlo,Consolas,monospace;
+  --max:1240px;--gut:clamp(20px,5vw,64px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.78;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--zhe);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--zhe);margin:0 0 18px}
+.eyebrow--light{color:var(--zhe-l)}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .4s ease,border-color .4s ease,backdrop-filter .4s ease;border-bottom:1px solid transparent}
+.nav.is-solid{background:rgba(251,248,241,.95);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+.nav__in{max-width:var(--max);margin:0 auto;padding:0 var(--gut);display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px}
+.brand{display:flex;align-items:baseline;gap:11px;flex:none}
+.brand__mark{font-family:var(--serif);font-size:19px;letter-spacing:.05em}
+.brand__sub{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:var(--mute);text-transform:uppercase}
+.nav__right{display:flex;align-items:center;gap:clamp(12px,2vw,26px)}
+.nav__links{display:flex;gap:clamp(10px,1.6vw,22px);align-items:center}
+.nav__links a{font-size:13.5px;letter-spacing:.04em;padding:6px 0;position:relative;transition:color .25s ease;white-space:nowrap}
+.nav__links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--zhe);transition:width .3s ease}
+.nav__links a:hover{color:var(--zhe)}
+.nav__links a:hover::after,.nav__links a.is-active::after{width:100%}
+.nav__links a.is-active{color:var(--zhe)}
+.nav__cta{border:1px solid var(--ink);padding:8px 16px !important;border-radius:2px;transition:background .25s ease,color .25s ease}
+.nav__cta::after{display:none}
+.nav__cta:hover{background:var(--ink);color:var(--paper) !important}
+.lang{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);background:none;font:inherit;cursor:pointer;padding:6px 11px;border-radius:2px;font-size:11.5px;letter-spacing:.1em;color:var(--mute);transition:border-color .25s,color .25s}
+.lang:hover{border-color:var(--ink);color:var(--ink)}
+.lang b{font-weight:400;color:var(--ink)}
+.lang i{font-style:normal;opacity:.4}
+@media (max-width:1080px){.nav__links a:not(.nav__cta){display:none}.nav__in{height:62px}}
+
+/* page hero */
+.phero{position:relative;background:var(--ink);color:var(--paper);padding:clamp(104px,13vh,146px) 0 clamp(46px,6vw,72px);overflow:hidden}
+.phero__grain{position:absolute;inset:0;opacity:.5;pointer-events:none}
+.phero__glow{position:absolute;top:-40%;right:-14%;width:min(700px,88vw);height:min(700px,88vw);background:radial-gradient(circle,rgba(192,138,62,.2) 0%,rgba(192,138,62,0) 66%);pointer-events:none}
+.phero__in{position:relative;z-index:2}
+.crumb{display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:rgba(251,248,241,.45);margin-bottom:26px;flex-wrap:wrap}
+.crumb a{transition:color .25s}
+.crumb a:hover{color:var(--zhe-l)}
+.crumb span[aria-current]{color:rgba(251,248,241,.8)}
+.phero h1{font-family:var(--serif);font-weight:400;font-size:clamp(27px,4.4vw,50px);line-height:1.32;margin:0 0 22px;max-width:20em}
+.phero h1 em{font-style:normal;color:var(--jiang)}
+.phero__lead{font-size:clamp(14.5px,1.5vw,16.5px);line-height:1.98;color:rgba(251,248,241,.72);max-width:44em;margin:0}
+.phero__meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.phero__meta span{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;border:1px solid var(--line-d);padding:6px 12px;border-radius:2px;color:rgba(251,248,241,.62)}
+
+/* section */
+.sec{padding:clamp(56px,7.5vw,96px) 0}
+.sec--paper2{background:var(--paper-2)}
+.sec--ink{background:var(--ink);color:var(--paper)}
+.sec--tight{padding:clamp(40px,5vw,64px) 0}
+.sec__head{max-width:46em;margin-bottom:clamp(32px,4.4vw,52px)}
+.sec__head h2{font-family:var(--serif);font-weight:400;font-size:clamp(23px,3.1vw,36px);line-height:1.4;margin:0 0 16px}
+.sec__head p{margin:0;color:var(--mute);font-size:15px;line-height:1.92;max-width:38em}
+.sec--ink .sec__head p{color:rgba(251,248,241,.68)}
+.sec__head--wide{max-width:60em}
+
+/* prose */
+.prose{max-width:44em}
+.prose p{font-size:15px;line-height:2;color:#4a463c;margin:0 0 20px}
+.prose h3{font-family:var(--serif);font-weight:400;font-size:clamp(18px,2.2vw,23px);line-height:1.5;margin:36px 0 14px}
+.prose ul{margin:0 0 20px;padding-left:0;list-style:none}
+.prose ul li{position:relative;padding-left:16px;font-size:14.5px;line-height:1.9;color:var(--mute);margin-bottom:7px}
+.prose ul li::before{content:"";position:absolute;left:0;top:.85em;width:5px;height:1px;background:var(--zhe)}
+.prose strong{color:var(--ink);font-weight:600}
+
+/* two col */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4.5vw,64px);align-items:start}
+.split--wide{grid-template-columns:minmax(0,.75fr) minmax(0,1.55fr)}
+@media (max-width:860px){.split,.split--wide{grid-template-columns:1fr;gap:28px}}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.card{background:var(--paper);padding:clamp(24px,3vw,34px);display:flex;flex-direction:column;transition:background .3s ease}
+.card:hover{background:#fff}
+.card__no{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;color:var(--zhe);margin-bottom:16px}
+.card h3{font-family:var(--serif);font-weight:400;font-size:20px;line-height:1.45;margin:0 0 10px}
+.card p{margin:0 0 16px;font-size:13.8px;line-height:1.85;color:var(--mute)}
+.card__link{margin-top:auto;font-size:12.5px;letter-spacing:.08em;color:var(--zhe);display:inline-flex;align-items:center;gap:6px}
+.card__link::after{content:"→";transition:transform .3s ease}
+.card:hover .card__link::after{transform:translateX(4px)}
+.sec--paper2 .card{background:var(--paper-2)}
+.sec--paper2 .card:hover{background:#fff}
+
+/* table */
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table.dt{width:100%;border-collapse:collapse;min-width:640px}
+table.dt caption{text-align:left;font-size:13px;color:var(--mute);padding-bottom:14px}
+table.dt th,table.dt td{text-align:left;padding:14px 18px 14px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.72;vertical-align:top}
+table.dt thead th{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--mute-l);font-weight:400;border-bottom:1px solid var(--ink)}
+table.dt td:first-child{font-family:var(--serif);font-size:15px;white-space:nowrap}
+table.dt td:last-child{color:var(--mute);font-size:13.5px}
+table.dt tbody tr:hover{background:rgba(154,95,58,.04)}
+
+/* steps */
+.steps{counter-reset:s;display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.step{background:var(--paper);padding:clamp(20px,2.6vw,28px);display:grid;grid-template-columns:38px 1fr;gap:16px;align-items:start}
+.step__n{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--zhe);padding-top:.4em}
+.step h3{font-family:var(--serif);font-weight:400;font-size:17px;margin:0 0 7px;line-height:1.5}
+.step p{margin:0;font-size:13.6px;line-height:1.85;color:var(--mute)}
+
+/* fact strip */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line-d);border:1px solid var(--line-d)}
+.fact{background:var(--ink);padding:clamp(20px,2.6vw,28px)}
+.fact__k{font-family:var(--serif);font-size:clamp(22px,3vw,30px);line-height:1.1;color:var(--paper);margin-bottom:8px}
+.fact__d{font-size:12.5px;line-height:1.7;color:rgba(251,248,241,.6)}
+
+/* callout */
+.callout{border-left:2px solid var(--zhe);padding:4px 0 4px 22px;margin:28px 0}
+.callout p{margin:0;font-family:var(--serif);font-size:clamp(16px,2vw,19px);line-height:1.85;color:var(--ink)}
+.callout--ink{border-color:var(--zhe-l)}
+.callout--ink p{color:var(--paper)}
+
+/* note */
+.note{background:var(--paper-2);border:1px solid var(--line);padding:clamp(20px,2.6vw,28px);margin:26px 0}
+.note p{margin:0;font-size:13.8px;line-height:1.9;color:var(--mute)}
+.note strong{color:var(--ink);font-weight:600}
+
+/* faq */
+.faq{max-width:56em}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-of-type{border-top:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:22px 44px 22px 0;font-family:var(--serif);font-size:16.5px;line-height:1.6;position:relative;transition:color .25s ease}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:11px;height:11px;margin-top:-6px;border-right:1px solid var(--zhe);border-bottom:1px solid var(--zhe);transform:rotate(45deg);transition:transform .3s ease}
+.faq details[open] summary::after{transform:rotate(-135deg);margin-top:-3px}
+.faq summary:hover{color:var(--zhe)}
+.faq__a{padding:0 44px 24px 0;margin:0;font-size:14.5px;line-height:1.92;color:var(--mute)}
+
+/* cta */
+.cta{background:var(--ink);color:var(--paper);padding:clamp(50px,7vw,84px) 0;position:relative;overflow:hidden}
+.cta__glow{position:absolute;bottom:-50%;left:-10%;width:min(680px,90vw);height:min(680px,90vw);background:radial-gradient(circle,rgba(192,138,62,.2) 0%,rgba(192,138,62,0) 68%);pointer-events:none}
+.cta__in{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,56px);align-items:flex-end;justify-content:space-between}
+.cta h2{font-family:var(--serif);font-weight:400;font-size:clamp(23px,3.3vw,36px);line-height:1.4;margin:0 0 16px;max-width:18em}
+.cta p{font-size:14.5px;line-height:1.95;color:rgba(251,248,241,.7);margin:0;max-width:32em}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 30px;font-size:14px;letter-spacing:.06em;border-radius:2px;border:1px solid transparent;transition:background .28s ease,color .28s ease,border-color .28s ease,transform .28s ease}
+.btn:active{transform:translateY(1px)}
+button.btn{font:inherit;cursor:pointer;border:none}
+.btn--fill{background:var(--zhe);color:#fff}
+.btn--fill:hover{background:var(--zhe-l)}
+.btn--ghost{border-color:rgba(251,248,241,.34);color:var(--paper)}
+.btn--ghost:hover{border-color:rgba(251,248,241,.72);background:rgba(251,248,241,.08)}
+.btn--ink{border-color:var(--ink);color:var(--ink)}
+.btn--ink:hover{background:var(--ink);color:var(--paper)}
+.btn__arw{font-size:15px;line-height:1}
+.cta__acts{display:flex;flex-wrap:wrap;gap:12px}
+
+/* contact list */
+.clist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-d);max-width:34em}
+.clist li{display:grid;grid-template-columns:86px 1fr;gap:18px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line-d)}
+.clist dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;color:rgba(251,248,241,.45);text-transform:uppercase}
+.clist dd{margin:0;font-size:15px;letter-spacing:.02em;overflow-wrap:anywhere}
+
+/* next/prev */
+.next{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.next a{background:var(--paper);padding:clamp(22px,2.8vw,30px);transition:background .3s ease;display:block}
+.next a:hover{background:#fff}
+.next__k{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--mute-l);margin-bottom:9px}
+.next__t{font-family:var(--serif);font-size:18px;line-height:1.45;display:flex;align-items:center;gap:8px}
+.next__t::after{content:"→";font-size:14px;color:var(--zhe);transition:transform .3s ease}
+.next a:hover .next__t::after{transform:translateX(4px)}
+
+/* footer */
+.foot{background:#131310;color:var(--mute-l);padding:34px 0;font-size:12.5px;letter-spacing:.03em}
+.foot__in{max-width:var(--max);margin:0 auto;padding:0 var(--gut);display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between;align-items:center}
+.foot__in span{line-height:1.7}
+.foot a{transition:color .25s}
+.foot a:hover{color:var(--paper)}
+
+/* reveal */
+.rv{opacity:1;transform:none}
+@media (prefers-reduced-motion:no-preference){
+  .rv{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+  .rv.is-in{opacity:1;transform:none}
+}
+
+/* program item */
+.prog{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(22px,3.4vw,46px);align-items:start;padding:clamp(30px,4vw,48px) 0;border-bottom:1px solid var(--line)}
+.prog:first-of-type{border-top:1px solid var(--line)}
+.prog__media{position:relative;overflow:hidden;background:var(--paper-3);aspect-ratio:16/10}
+.prog__media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.3,1)}
+.prog:hover .prog__media img{transform:scale(1.035)}
+.prog__no{position:absolute;top:0;left:0;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:10px;letter-spacing:.14em;padding:6px 11px}
+.prog__body h3{font-family:var(--serif);font-weight:400;font-size:clamp(20px,2.5vw,27px);line-height:1.4;margin:0 0 7px}
+.prog__tag{font-size:12.5px;color:var(--mute);margin:0 0 16px;letter-spacing:.02em}
+.prog__body p{font-size:14.5px;line-height:1.94;color:#4a463c;margin:0 0 15px}
+.prog__body ul{list-style:none;margin:0 0 4px;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:5px 20px}
+.prog__body ul li{position:relative;padding-left:14px;font-size:13.4px;line-height:1.75;color:var(--mute)}
+.prog__body ul li::before{content:"";position:absolute;left:0;top:.78em;width:5px;height:1px;background:var(--zhe)}
+.price{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;margin:20px 0 12px;padding-top:16px;border-top:1px solid var(--line)}
+.price__k{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--mute-l);text-transform:uppercase;flex:none}
+.price__n{font-family:var(--serif);font-size:clamp(18px,2.2vw,23px);color:var(--ink);line-height:1.3}
+.price__d{font-size:12px;color:var(--mute)}
+.mrow{display:flex;flex-wrap:wrap;gap:5px 20px}
+.mrow span{font-size:12.4px;color:var(--mute);line-height:1.7}
+.mrow b{font-weight:600;color:var(--ink)}
+@media (max-width:860px){.prog{grid-template-columns:1fr;gap:20px}}
+
+/* banner image */
+.banner{position:relative;overflow:hidden;background:var(--paper-3)}
+.banner img{width:100%;height:clamp(200px,38vw,420px);object-fit:cover;display:block}
+.banner__cap{position:absolute;left:0;bottom:0;right:0;background:linear-gradient(to top,rgba(19,19,16,.72),rgba(19,19,16,0));color:var(--paper);padding:26px clamp(18px,3vw,32px) 18px;font-size:12.5px;letter-spacing:.04em}
+
+/* form */
+.form{display:grid;gap:16px;max-width:44em}
+.fld{display:grid;gap:7px}
+.fld label{font-size:12.5px;letter-spacing:.04em;color:var(--mute)}
+.fld label b{color:var(--zhu-s);font-weight:400}
+.fld input,.fld select,.fld textarea{width:100%;font:inherit;font-size:14.5px;padding:12px 14px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:2px;transition:border-color .25s ease,background .25s ease}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--zhe);background:#fff}
+.fld textarea{min-height:112px;resize:vertical;line-height:1.8}
+.fld--row{grid-template-columns:1fr 1fr;gap:16px}
+.fld--row>div{display:grid;gap:7px}
+@media (max-width:620px){.fld--row{grid-template-columns:1fr}}
+
+/* tables */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);background:var(--paper)}
+table{width:100%;border-collapse:collapse;min-width:620px}
+caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);padding:14px 18px;border-bottom:1px solid var(--line)}
+th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line);font-size:13.5px;line-height:1.7;vertical-align:top}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);background:var(--paper-2);font-weight:400}
+tbody tr:last-child td{border-bottom:0}
+
+/* timeline */
+.timeline{border-top:1px solid var(--line)}
+.tl{display:grid;grid-template-columns:64px minmax(0,1fr);gap:clamp(14px,2.4vw,32px);padding:clamp(22px,3vw,34px) 0;border-bottom:1px solid var(--line)}
+.tl__y{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--zhe);padding-top:4px}
+.tl h3{font-family:var(--serif);font-weight:400;font-size:clamp(18px,2.1vw,22px);margin:0 0 8px}
+.tl p{margin:0;font-size:14px;line-height:1.9;color:var(--mute)}
+
+/* chain */
+.chain{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(14px,2.2vw,26px)}
+.chain__i{border:1px solid var(--line);padding:clamp(22px,2.6vw,32px);background:var(--paper)}
+.chain__k{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--zhe);margin-bottom:12px}
+.chain__i h3{font-family:var(--serif);font-weight:400;font-size:19px;margin:0 0 9px}
+.chain__i p{margin:0;font-size:13.5px;line-height:1.86;color:var(--mute)}
+
+/* pullquote */
+.pullquote{margin:0 0 22px;padding:0 0 0 22px;border-left:2px solid var(--zhe)}
+.pullquote p{font-family:var(--serif);font-size:clamp(19px,2.4vw,26px);line-height:1.72;margin:0;color:var(--ink)}
+
+/* founder figure */
+.founder__fig{margin:0}
+.founder__fig img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:var(--paper-3)}
+.founder__fig figcaption{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--mute);margin-top:11px;line-height:1.7}
+
+/* info list */
+.cinfo{margin:0;border-top:1px solid var(--line)}
+.cinfo>div{display:grid;grid-template-columns:minmax(78px,.4fr) minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.cinfo dt{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--mute);padding-top:3px}
+.cinfo dd{margin:0;font-size:13.5px;line-height:1.75}
+
+/* home hero */
+.hero{position:relative;min-height:clamp(560px,88vh,820px);display:flex;align-items:flex-end;overflow:hidden;background:var(--ink);color:var(--paper);padding:clamp(90px,12vh,140px) 0 clamp(46px,7vh,80px)}
+.hero__bg{position:absolute;inset:0}
+.hero__bg img{width:100%;height:100%;object-fit:cover;opacity:.42}
+.hero__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,27,22,.72) 0%,rgba(27,27,22,.42) 42%,rgba(27,27,22,.92) 100%)}
+.hero__in{position:relative;z-index:2;width:100%}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,6.4vw,76px);line-height:1.16;letter-spacing:-.01em;margin:0 0 22px;max-width:17em}
+.hero h1 em{font-style:normal;color:var(--zhe-l)}
+.hero__lead{font-size:clamp(14.5px,1.5vw,17px);line-height:1.92;color:rgba(251,248,241,.78);max-width:44em;margin:0 0 30px}
+.hero__acts{display:flex;flex-wrap:wrap;gap:12px}
+.hero__meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;padding-top:22px;border-top:1px solid var(--line-d);font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(251,248,241,.6)}
+.hero .btn--ghost{border-color:rgba(251,248,241,.4);color:var(--paper)}
+.hero .btn--ghost:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+
+/* entry cards */
+.entries{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:clamp(14px,2.2vw,26px)}
+.entry{position:relative;border:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column;overflow:hidden;transition:border-color .35s ease}
+.entry:hover{border-color:rgba(154,95,58,.55)}
+.entry__img{aspect-ratio:16/10;overflow:hidden;background:var(--paper-3)}
+.entry__img img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.3,1)}
+.entry:hover .entry__img img{transform:scale(1.045)}
+.entry__b{padding:clamp(20px,2.4vw,28px);display:flex;flex-direction:column;flex:1}
+.entry__k{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--zhe);margin-bottom:11px}
+.entry h3{font-family:var(--serif);font-weight:400;font-size:21px;line-height:1.42;margin:0 0 9px}
+.entry p{margin:0 0 16px;font-size:13.5px;line-height:1.84;color:var(--mute)}
+.entry__go{margin-top:auto;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--zhe)}
+
+.fnote{font-size:12px;color:var(--mute-l);line-height:1.7;margin:0}
+.fmsg{font-size:13.5px;line-height:1.7;padding:13px 15px;border-radius:2px;display:none}
+.fmsg.is-ok{display:block;background:rgba(92,110,88,.12);border:1px solid rgba(92,110,88,.4);color:#3f4d3c}
+.fmsg.is-err{display:block;background:rgba(168,51,44,.08);border:1px solid rgba(168,51,44,.35);color:#8b2b25}
+button.btn[disabled]{opacity:.6;cursor:default}
+
+/* product grid */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:clamp(16px,2.4vw,28px)}
+.pcard{border:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column;transition:border-color .3s ease}
+.pcard:hover{border-color:rgba(154,95,58,.5)}
+.pcard__img{aspect-ratio:1/1;overflow:hidden;background:var(--paper-3)}
+.pcard__img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.3,1)}
+.pcard:hover .pcard__img img{transform:scale(1.04)}
+.pcard__body{padding:clamp(16px,2vw,22px);display:flex;flex-direction:column;flex:1}
+.pcard__k{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--zhe);margin-bottom:10px;text-transform:uppercase}
+.pcard h3{font-family:var(--serif);font-weight:400;font-size:19px;line-height:1.45;margin:0 0 7px}
+.pcard__spec{font-size:12.5px;color:var(--mute);line-height:1.7;margin:0 0 12px}
+.pcard__p{font-family:var(--serif);font-size:19px;margin:auto 0 4px;color:var(--ink)}
+.pcard__p small{font-family:var(--sans);font-size:11.5px;color:var(--mute);margin-left:5px}
+.pcard__act{margin-top:14px}
+.pcard__act .btn{width:100%;justify-content:center;padding:11px 16px;font-size:13px}
+.sec--paper2 .pcard{background:var(--paper-2)}
+
+/* print */
+@media print{
+  .nav{position:static;background:none;border-bottom:1px solid #999}
+  .nav__links,.lang{display:none}
+  .phero,.sec--ink,.cta{background:#fff !important;color:#000 !important}
+  .phero h1,.phero__lead,.phero__meta span,.fact__k,.fact__d,.callout--ink p,.cta p,.cta h2,.clist dt,.clist dd,.sec--ink .sec__head p{color:#000 !important}
+  .phero__grain,.phero__glow,.cta__glow{display:none}
+  .fact,.card,.step{background:#fff !important}
+  .fact,.steps,.next,.cards{border:1px solid #ccc}
+  .rv{opacity:1 !important;transform:none !important}
+  .btn{border:1px solid #000;color:#000 !important;background:none !important}
+  .sec{padding:24px 0;break-inside:avoid}
+  .faq details{break-inside:avoid}
+  .faq__a{display:block}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:10px;color:#555}
+}
+</style>
+</head>
+<body>
+<header class="nav is-solid" id="nav">
+  <div class="nav__in">
+    <a class="brand" href="index.html">
+      <span class="brand__mark">Global Health</span>
+      <span class="brand__sub">Nara · Japan</span>
+    </a>
+    <div class="nav__right">
+      <nav class="nav__links" aria-label="页面导航">
+        <a href="food.html" data-en="Food">食养</a>
+        <a href="medical.html" data-en="Medical">跨境医疗</a>
+        <a href="stemcell.html" data-en="Stem Cells">干细胞</a>
+        <a href="business.html" data-en="Partnership">商务合作</a>
+        <a href="courses.html" data-en="Programs">课程</a>
+        <a href="product.html" data-en="Products">产品</a>
+        <a href="about.html" data-en="About">关于</a>
+        <a class="nav__cta" href="index.html#contact" data-en="Contact">联系</a>
+      </nav>
+      <button type="button" class="lang" id="lang-btn" aria-label="切换语言 / Switch language">
+        <b id="lang-zh">中文</b><i>/</i><span id="lang-en">EN</span>
+      </button>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="phero">
+    <svg class="phero__grain" aria-hidden="true" viewBox="0 0 1200 600" preserveAspectRatio="none" width="100%" height="100%">
+      <defs><pattern id="pg" width="68" height="68" patternUnits="userSpaceOnUse"><path d="M68 0H0V68" fill="none" stroke="rgba(251,248,241,.05)" stroke-width="1"/></pattern></defs>
+      <rect width="100%" height="100%" fill="url(#pg)"/>
+    </svg>
+    <div class="phero__glow" aria-hidden="true"></div>
+    <div class="wrap phero__in">
+      <nav class="crumb" aria-label="面包屑">
+        <a href="index.html" data-en="Home">首页</a><span>/</span><span aria-current="page" data-en="Partnerships">合作</span>
+      </nav>
+      <p class="eyebrow eyebrow--light">Business · Events</p>
+      <h1 data-en="Technology, equity, and <em>getting the right people in one room</em>">技术、股权，和<em>把对的人放进同一间屋子</em></h1>
+      <p class="phero__lead" data-en="For Chinese hospitals, clinics, investors and companies: bringing Japanese and American technology in, structuring it properly, and running the medical events that make the introductions real. Business enquiries go to email — not the booking form.">面向中国医院、诊所、投资方与企业：把日本和美国的技术引进来，把结构设计对，以及组织那些让介绍真正发生的医疗活动。商务事宜请发邮件，不走预约表单。</p>
+      <div class="phero__meta">
+        <span data-en="Due diligence included">含前期尽调</span>
+        <span data-en="We execute, not just introduce">做落地，不只做介绍</span>
+        <span data-en="Email for business">商务走邮箱</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="split">
+        <div class="rv">
+          <p class="eyebrow">Technology Cooperation</p>
+          <h2 style="font-family:var(--serif);font-weight:400;font-size:clamp(23px,3.1vw,34px);line-height:1.4;margin:0 0 18px" data-en="What we can actually bring across">我们真正能带过来的东西</h2>
+          <p style="font-size:14.5px;line-height:1.96;color:var(--mute);margin:0 0 14px" data-en="Most cross-border technology deals fail in the same place: the introduction happens, the memorandum is signed, and then nothing moves because nobody is on the ground to do the work. We are on the ground in Japan, with an operating entity in China.">多数跨境技术合作死在同一处：介绍发生了，备忘录签了，然后什么都没动，因为落地那一步没有人在场。我们在日本有常驻，在中国有实体。</p>
+          <p style="font-size:14.5px;line-height:1.96;color:var(--mute);margin:0" data-en="Due diligence, negotiation, structure, and execution. We do not pass paper between two parties and take a fee for the introduction.">尽调、谈判、结构设计、落地执行。不做「把纸从 A 递到 B 然后收介绍费」这件事。</p>
+        </div>
+        <div class="rv">
+          <div class="note">
+            <p data-en="<strong>Regenerative medicine technology</strong> — cell processing protocols, CPC facility design and operation, filing support under Japanese regulation."><strong>再生医疗技术</strong> — 细胞加工工艺、CPC 设施设计与运营、日本法规下的备案支持。</p>
+          </div>
+          <div class="note">
+            <p data-en="<strong>Screening systems</strong> — precision screening workflow, reporting standards, physician training, and the operational detail that makes a screening centre work."><strong>体检体系</strong> — 精密体检流程、报告标准、医师培训，以及让一个体检中心真正跑起来的运营细节。</p>
+          </div>
+          <div class="note">
+            <p data-en="<strong>Product formulas</strong> — medicinal shampoo, soup kits, matcha sourcing. Formulation, OEM arrangement, and quality documentation."><strong>产品配方</strong> — 中药洗发水、药膳汤包、抹茶采购。配方、OEM 安排与质量文件。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--paper2">
+    <div class="wrap">
+      <div class="sec__head rv">
+        <p class="eyebrow">Structures</p>
+        <h2 data-en="Four ways to structure it">四种合作方式</h2>
+        <p data-en="Which structure fits depends on what you have, what you want, and how much control you need. We will tell you which one we think is wrong for you.">用哪种结构，取决于你有什么、想要什么、需要多少控制权。哪一种我们认为不适合你，也会直说。</p>
+      </div>
+
+      <div class="prog rv">
+        <div class="prog__media"><span class="prog__no">01</span><img src="https://hikaruhuimin.github.io/global-health-site/images/lab.jpg" alt="实验室中的技术设备" loading="lazy"></div>
+        <div class="prog__body">
+          <h3 data-en="Technology Equity">技术入股</h3>
+          <p class="prog__tag" data-en="Valuation · Equity split · Governance">估值 · 股权比例 · 治理安排</p>
+          <p data-en="The Japanese or American side contributes technology and team; the Chinese side contributes capital, market and licence. We handle the valuation basis, the equity split, the vesting and the governance terms — the parts that decide whether the partnership survives year three.">日方或美方出技术与团队，中方出资金、市场与牌照。我们负责估值依据、股权比例、分期归属和治理条款——这几项决定合伙能不能活到第三年。</p>
+          <ul>
+            <li data-en="Technology valuation basis">技术估值依据</li>
+            <li data-en="Equity and vesting terms">股权与归属条款</li>
+            <li data-en="Board and decision rights">董事会与决策权</li>
+            <li data-en="Exit and buyout clauses">退出与回购条款</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog rv">
+        <div class="prog__media"><span class="prog__no">02</span><img src="https://hikaruhuimin.github.io/global-health-site/images/herbpack.jpg" alt="中药材与产品" loading="lazy"></div>
+        <div class="prog__body">
+          <h3 data-en="Licensing and Transfer">技术许可与技术转让</h3>
+          <p class="prog__tag" data-en="Exclusive or non-exclusive · Territory · Royalty">独家或非独家 · 地域 · 提成</p>
+          <p data-en="License the technology for a defined territory, or transfer it outright with training and documentation. We negotiate scope, exclusivity, territory, royalty and the know-how transfer schedule that makes the licence actually usable.">按地域许可，或整体转让并附培训与文档。我们谈范围、独家性、地域、提成，以及让这份许可真正能用的技术转移时间表。</p>
+          <ul>
+            <li data-en="Scope and exclusivity">范围与独家性</li>
+            <li data-en="Territory definition">地域界定</li>
+            <li data-en="Royalty and milestone payments">提成与里程碑付款</li>
+            <li data-en="Know-how transfer schedule">技术转移排期</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog rv">
+        <div class="prog__media"><span class="prog__no">03</span><img src="https://hikaruhuimin.github.io/global-health-site/images/scan.jpg" alt="医疗设施内部" loading="lazy"></div>
+        <div class="prog__body">
+          <h3 data-en="Joint Venture">合资落地</h3>
+          <p class="prog__tag" data-en="Entity setup · Licensing · Operations">主体设立 · 资质 · 运营</p>
+          <p data-en="A new entity in China or Japan, with both sides holding equity. We handle entity setup, medical licensing requirements, staffing plan and the first eighteen months of operations — the period where joint ventures usually stall.">在中国或日本新设主体，双方持股。我们负责主体设立、医疗资质要求、人员方案，以及前十八个月的运营——合资通常就是在这段卡住的。</p>
+          <ul>
+            <li data-en="Entity and capital structure">主体与出资结构</li>
+            <li data-en="Medical licensing path">医疗资质路径</li>
+            <li data-en="Staffing and training">人员与培训</li>
+            <li data-en="First 18 months operations">前 18 个月运营</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prog rv">
+        <div class="prog__media"><span class="prog__no">04</span><img src="https://hikaruhuimin.github.io/global-health-site/images/meal.jpg" alt="产品与餐食" loading="lazy"></div>
+        <div class="prog__body">
+          <h3 data-en="OEM and Distribution">OEM 与代理分销</h3>
+          <p class="prog__tag" data-en="Formulation · Manufacturing · Channel">配方 · 生产 · 渠道</p>
+          <p data-en="For product lines: Japanese formulation and quality standards, manufacturing in Japan or China, and distribution rights in a defined market. Lower commitment than a joint venture, faster to first revenue.">产品线方向：日本配方与质量标准，在日本或中国生产，指定市场的分销权。比合资轻，见到第一笔收入更快。</p>
+          <ul>
+            <li data-en="Formulation and specification">配方与规格</li>
+            <li data-en="Factory selection and audit">工厂选择与审核</li>
+            <li data-en="Label and compliance review">标签与合规审查</li>
+            <li data-en="Territory distribution rights">区域分销权</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec__head rv">
+        <p class="eyebrow">Events</p>
+        <h2 data-en="International medical events">国际医疗活动组织</h2>
+        <p data-en="Introductions that happen in a conference hall rarely turn into deals. Introductions that happen inside a working lab do. We run the second kind.">在会场里发生的介绍，很少变成合作。在运转中的实验室里发生的介绍，会。我们做后一种。</p>
+      </div>
+
+      <div class="prog rv">
+        <div class="prog__media"><span class="prog__no">01</span><img src="https://hikaruhuimin.github.io/global-health-site/images/lab.jpg" alt="实验室考察" loading="lazy"></div>
+        <div class="prog__body">
+          <h3 data-en="Institutional Delegations">机构考察团</h3>
+          <p class="prog__tag" data-en="Hospitals · Clinics · Labs · 3–5 days">医院 · 诊所 · 实验室 · 3–5 天</p>
+          <p data-en="Five to eight people, three to five days, two to four institutions. Not a bus tour — each visit is arranged around a specific question the delegation came to answer, with the right person from the host institution in the room.">5–8 人，3–5 天，2–4 家机构。不是坐大巴参观——每次拜访围绕考察团带来的具体问题安排，对方机构里对口的人必须在场。</p>
+          <div class="price">
+            <span class="price__k" data-en="From">起</span>
+            <span class="price__n">¥600,000</span>
+            <span class="price__d" data-en="JPY / delegation, excluding flights">日元 / 团，不含机票</span>
+          </div>
+          <div class="mrow"><span><b data-en="Includes">含</b> · <span data-en="Itinerary, bookings, interpretation, hosting">行程、预约、翻译、接待</span></span></div>
+        </div>
+      </div>
+
+      <div class="prog rv">
+        <div class="prog__media"><span class="prog__no">02</span><img src="https://hikaruhuimin.github.io/global-health-site/images/scan.jpg" alt="医疗论坛场地" loading="lazy"></div>
+        <div class="prog__body">
+          <h3 data-en="Forums and Exhibitions">论坛与展会协办</h3>
+          <p class="prog__tag" data-en="Programme design · Speaker invitations · On-site">议程设计 · 专家邀请 · 现场执行</p>
+          <p data-en="From a fifty-person closed-door roundtable to a three-hundred-person forum. Programme design, speaker invitations from Japanese and American institutions, simultaneous interpretation, and on-site hosting. We do not subcontract the parts that matter.">从五十人的闭门圆桌到三百人的论坛。议程设计、日美机构专家邀请、同声传译、现场主持。关键环节不转包。</p>
+          <div class="price">
+            <span class="price__k" data-en="Quote">报价</span>
+            <span class="price__n" data-en="By scale">按规模</span>
+            <span class="price__d" data-en="Scoped after a brief">沟通后出方案</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="prog rv">
+        <div class="prog__media"><span class="prog__no">03</span><img src="https://hikaruhuimin.github.io/global-health-site/images/forest.jpg" alt="奈良的森林" loading="lazy"></div>
+        <div class="prog__body">
+          <h3 data-en="Study Programmes">研修与主题营</h3>
+          <p class="prog__tag" data-en="Clinical training · Management · 2–7 days">临床研修 · 管理研修 · 2–7 天</p>
+          <p data-en="Short residential programmes for clinicians and managers: clinical observation, service design, and the operational side of running a Japanese clinic. Combined with the food and healing side of the platform when the group wants both.">面向临床与管理人员的短期驻留项目：临床观摩、服务设计，以及运营一家日本诊所的实际做法。需要的话，可以并上平台的食养与疗愈部分。</p>
+          <div class="price">
+            <span class="price__k" data-en="From">起</span>
+            <span class="price__n">¥180,000</span>
+            <span class="price__d" data-en="JPY / person">日元 / 人</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--ink">
+    <div class="wrap">
+      <div class="sec__head rv">
+        <p class="eyebrow eyebrow--light">How We Work</p>
+        <h2 data-en="Four steps, and an honest exit at step two">四步，第二步就可以诚实地退出</h2>
+      </div>
+      <div class="steps steps--dark rv">
+        <div class="step"><span class="step__n">01</span><div><h3 data-en="Brief">说清需求</h3><p data-en="What you have, what you want, timeline, budget. One email is enough to start.">你有什么、想要什么、时间、预算。一封邮件就能开始。</p></div></div>
+        <div class="step"><span class="step__n">02</span><div><h3 data-en="Feasibility">可行性</h3><p data-en="Whether it can be done, who the right partner is, what it roughly costs. If it cannot be done, we say so here.">能不能做、对口的是谁、大概什么代价。做不了就在这一步说。</p></div></div>
+        <div class="step"><span class="step__n">03</span><div><h3 data-en="Due diligence">尽调与谈判</h3><p data-en="On the technology, the partner, the numbers. Negotiation with both sides present.">技术、合作方、数字。双方在场的谈判。</p></div></div>
+        <div class="step"><span class="step__n">04</span><div><h3 data-en="Execution">落地</h3><p data-en="Entity, licensing, hiring, first operations. We stay through the part that is boring and decisive.">主体、资质、招聘、初期运营。枯燥但决定成败的那一段，我们在。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--paper2">
+    <div class="wrap">
+      <div class="split">
+        <div class="rv">
+          <p class="eyebrow">Business Contact</p>
+          <h2 style="font-family:var(--serif);font-weight:400;font-size:clamp(23px,3.1vw,34px);line-height:1.4;margin:0 0 18px" data-en="Technology cooperation and transfer — by email">技术合作、技术转让，请发邮件</h2>
+          <p style="font-size:14.5px;line-height:1.96;color:var(--mute);margin:0 0 18px" data-en="Business enquiries do not go through the booking form. Write to the address below with a short brief: who you are, what technology or partnership you are looking for, and what stage you are at. We reply to substantive emails.">商务事宜不走预约表单。请发到下面的邮箱，附一段简短说明：你是谁、在找什么技术或合作、现在到哪一步。有实质内容的邮件我们都会回。</p>
+          <p style="font-family:var(--mono);font-size:15px;letter-spacing:.06em;color:var(--zhe);margin:0 0 8px">info@ghealthorg.com</p>
+          <p class="fnote" data-en="For course, screening or product enquiries, use the booking form instead — it routes faster.">课程、体检、产品类咨询请用预约表单，那边处理更快。</p>
+        </div>
+        <div class="rv">
+          <div class="note">
+            <p data-en="<strong>What to include</strong> — entity name, your role, the technology or partner profile you are looking for, and your timeline."><strong>邮件里写清</strong> — 主体名称、你的角色、在找的技术或合作方画像、时间表。</p>
+          </div>
+          <div class="note">
+            <p data-en="<strong>What we will not do</strong> — sign an NDA before knowing what the subject is, or introduce you to a partner without a defined scope. Both waste everyone's time."><strong>我们不做的</strong> — 在不知道主题之前签保密协议；在没有明确范围之前就把你介绍给合作方。这两件都浪费所有人时间。</p>
+          </div>
+          <div class="note">
+            <p data-en="<strong>Language</strong> — Chinese, Japanese or English. Japanese and US partner materials are handled in the original."><strong>语言</strong> — 中文、日文或英文。日美合作方材料按原文处理。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec__head rv">
+        <p class="eyebrow">Questions</p>
+        <h2 data-en="Business questions">商务常见问题</h2>
+      </div>
+      <div class="faq rv">
+        <details open>
+          <summary data-en="Do you take a success fee or a retainer?">收费是成功费还是顾问费？</summary>
+          <p class="faq__a" data-en="Both, depending on structure. Feasibility and due diligence are billed as a fixed fee. Execution can be a retainer plus a success component. The split is agreed in writing before work starts.">都有，看结构。可行性与尽调按固定费用收。落地执行可以是顾问费加成功费。比例在开工前书面约定。</p>
+        </details>
+        <details>
+          <summary data-en="How long does a technology transfer take?">一次技术转让要多久？</summary>
+          <p class="faq__a" data-en="A licence can close in two to four months. A joint venture with medical licensing typically takes nine to eighteen months, because the licensing path is the long pole.">单纯许可两到四个月可签。带医疗资质的合资通常九到十八个月，卡在资质路径上。</p>
+        </details>
+        <details>
+          <summary data-en="Can you find a partner for us specifically?">能专门帮我们找合作方吗？</summary>
+          <p class="faq__a" data-en="Yes, that is a defined service: a partner search against your criteria, a shortlist with assessments, and facilitated first meetings. It is billed as a project, not on contingency.">可以，这是明确的单项服务：按你的标准搜合作方、给带评估的候选名单、促成首次会面。按项目收费，不做纯成功后付费。</p>
+        </details>
+        <details>
+          <summary data-en="Do you work with individual investors?">接受个人投资人吗？</summary>
+          <p class="faq__a" data-en="For projects above a defined threshold, yes. Below it, the coordination cost usually exceeds the value delivered, and we would rather say so upfront.">达到一定规模的项目可以。低于这个规模，协调成本会超过实际价值，这种情况我们宁愿提前说清楚。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--tight">
+    <div class="wrap">
+      <div class="next rv">
+        <a href="medical.html"><p class="next__k">NEXT</p><p class="next__t" data-en="Medical services">跨境医疗</p></a>
+        <a href="stemcell.html"><p class="next__k">NEXT</p><p class="next__t" data-en="Stem cells">干细胞</p></a>
+        <a href="about.html"><p class="next__k">NEXT</p><p class="next__t" data-en="Founder">创始人</p></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="foot">
+  <div class="foot__in">
+    <span>© 2026 Global Health · ghealthorg.com</span>
+    <span data-en="This page describes our services and does not constitute medical advice. Diagnosis and treatment plans are subject to assessment by the treating institution.">本页内容为服务说明，不构成医疗建议。具体诊疗方案以医疗机构面诊评估为准。</span>
+  </div>
+</footer>
+<script>
+(function(){
+  "use strict";
+  try{
+    var nav=document.getElementById("nav");
+    var onScroll=function(){ if(nav){nav.classList.toggle("is-solid",window.scrollY>40);} };
+    onScroll();
+    window.addEventListener("scroll",onScroll,{passive:true});
+
+    document.addEventListener("click",function(e){
+      var a=e.target.closest('a[href^="#"]');
+      if(!a) return;
+      var id=a.getAttribute("href");
+      if(!id||id==="#") return;
+      var t=document.querySelector(id);
+      if(!t) return;
+      e.preventDefault();
+      t.scrollIntoView({behavior:"smooth",block:"start"});
+      if(history.replaceState){history.replaceState(null,"",id);}
+    });
+
+    var nodes=document.querySelectorAll("[data-en]");
+    var cache=[];
+    var i;
+    for(i=0;i<nodes.length;i++){cache[i]=nodes[i].innerHTML;}
+    var bz=document.getElementById("lang-zh");
+    var be=document.getElementById("lang-en");
+    var lb=document.getElementById("lang-btn");
+    var te=document.querySelector("title");
+    var TZ=document.documentElement.getAttribute("data-title-zh")||document.title;
+    var TEN=document.documentElement.getAttribute("data-title-en")||document.title;
+    var cur="zh";
+
+    function apply(l){
+      for(var k=0;k<nodes.length;k++){
+        nodes[k].innerHTML=(l==="en")?nodes[k].getAttribute("data-en"):cache[k];
+      }
+      document.documentElement.lang=(l==="en")?"en":"zh-CN";
+      if(te){te.textContent=(l==="en")?TEN:TZ;}
+      if(bz){bz.style.color=(l==="zh")?"var(--ink)":"";bz.style.opacity=(l==="zh")?"1":".45";}
+      if(be){be.style.color=(l==="en")?"var(--ink)":"";be.style.opacity=(l==="en")?"1":".45";}
+      cur=l;
+      try{localStorage.setItem("gh_lang",l);}catch(e){}
+    }
+    if(lb){lb.addEventListener("click",function(){apply(cur==="zh"?"en":"zh");});}
+    var sv=null;
+    try{sv=localStorage.getItem("gh_lang");}catch(e){}
+    apply(sv==="en"?"en":"zh");
+
+    var cw=document.getElementById("copy-wx");
+    var label=document.getElementById("copy-label");
+    if(cw&&label){
+      cw.addEventListener("click",function(){
+        var wx=cw.getAttribute("data-wx")||"";
+        var original=label.innerHTML;
+        var flash=function(txt,ms){
+          label.innerHTML=txt;
+          cw.setAttribute("data-copied","1");
+          setTimeout(function(){label.innerHTML=original;cw.removeAttribute("data-copied");},ms);
+        };
+        var done=function(){flash(cur==="en"?"Copied — search in WeChat":"已复制，去微信搜 →",1800);};
+        var fail=function(){flash(cur==="en"?"WeChat: hikaru0701":"微信号：hikaru0701",2600);};
+        try{
+          if(navigator.clipboard&&navigator.clipboard.writeText){
+            navigator.clipboard.writeText(wx).then(done,fail);
+          }else{fail();}
+        }catch(e){fail();}
+      });
+    }
+
+    var bk=document.getElementById("booking");
+    if(bk){
+      var ENDPOINT="https://formsubmit.co/ajax/minjie_no1@coze.email";
+      var fItemWrap=document.getElementById("f-item-wrap");
+      var fItem=document.getElementById("f-item");
+      var fTopic=document.getElementById("f-topic");
+      var fmsg=document.getElementById("fmsg");
+      var fsub=document.getElementById("f-submit");
+      var fsubLabel=document.getElementById("f-submit-label");
+
+      try{
+        var qs=new URLSearchParams(location.search);
+        var pre=qs.get("item");
+        if(pre&&fItemWrap&&fItem){
+          fItem.value=pre;
+          fItemWrap.style.display="";
+          if(fTopic){fTopic.value="\u4ea7\u54c1\u8d2d\u4e70";}
+        }
+      }catch(e){}
+
+      var say=function(txt,ok){
+        if(!fmsg){return;}
+        fmsg.textContent=txt;
+        fmsg.className="fmsg "+(ok?"is-ok":"is-err");
+      };
+
+      bk.addEventListener("submit",function(ev){
+        ev.preventDefault();
+        if(!fmsg){return;}
+        var fn=bk.querySelector('[name="name"]');
+        var fc=bk.querySelector('[name="contact"]');
+        var ft=bk.querySelector('[name="topic"]');
+        if(!fn||!fn.value.replace(/\s/g,"")){
+          say(cur==="en"?"Please add a name.":"请填一下称呼。",false);
+          if(fn){fn.focus();}
+          return;
+        }
+        if(!fc||!fc.value.replace(/\s/g,"")){
+          say(cur==="en"?"Please leave a way to reach you.":"请留一个能联系到你的方式。",false);
+          if(fc){fc.focus();}
+          return;
+        }
+        if(!ft||!ft.value){
+          say(cur==="en"?"Please choose a topic.":"请选一个咨询方向。",false);
+          if(ft){ft.focus();}
+          return;
+        }
+
+        fmsg.className="fmsg";
+        fmsg.textContent=cur==="en"?"Sending…":"正在提交…";
+        if(fsub){fsub.disabled=true;}
+        if(fsubLabel){fsubLabel.innerHTML=cur==="en"?"Sending…":"提交中…";}
+
+        var fd=new FormData(bk);
+        fetch(ENDPOINT,{method:"POST",body:fd,headers:{"Accept":"application/json"}})
+          .then(function(r){return r.json();})
+          .then(function(d){
+            var ok=d&&(d.success==="true"||d.success===true);
+            if(ok){
+              bk.reset();
+              if(fItemWrap){fItemWrap.style.display="none";}
+              say(cur==="en"?"Sent. We reply within 24 hours on weekdays — usually sooner.":"已收到。工作日 24 小时内回复，通常更快。",true);
+            }else{
+              say(cur==="en"?"Could not send. Please add WeChat hikaru0701 instead.":"没发出去。请直接加微信 hikaru0701。",false);
+            }
+          })
+          .catch(function(){
+            say(cur==="en"?"Could not send. Please add WeChat hikaru0701 instead.":"没发出去。请直接加微信 hikaru0701。",false);
+          })
+          .then(function(){
+            if(fsub){fsub.disabled=false;}
+            if(fsubLabel){fsubLabel.innerHTML=cur==="en"?"Send":"\u63d0\u4ea4";}
+          });
+      });
+    }
+
+    var items=document.querySelectorAll(".rv");
+    if(!("IntersectionObserver" in window)){
+      for(i=0;i<items.length;i++){items[i].classList.add("is-in");}
+      return;
+    }
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(x){
+        if(x.isIntersecting){x.target.classList.add("is-in");io.unobserve(x.target);}
+      });
+    },{rootMargin:"0px 0px -8% 0px",threshold:0.06});
+    for(i=0;i<items.length;i++){io.observe(items[i]);}
+  }catch(err){
+    var all=document.querySelectorAll(".rv");
+    for(var m=0;m<all.length;m++){all[m].classList.add("is-in");}
+  }
+})();
+</script>
+</body>
+</html>

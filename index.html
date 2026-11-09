@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-title-zh="Global Health｜中医食材 · 营养料理 · 日美跨境医疗 · 干细胞 · 养生疗愈" data-title-en="Global Health | Chinese Medicine Food · Nutritional Cuisine · Japan & US Medical · Stem Cells · Wellbeing">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Global Health｜中医食材 · 营养料理 · 日美跨境医疗 · 干细胞 · 养生疗愈</title>
-<meta name="description" content="Global Health 以日本奈良为据点，做中医食材、营养料理、日美跨境医疗、干细胞考察与治疗、技术股合作对接、国际医疗活动组织与养生疗愈课程。从一日三餐，到一次彻底的健康管理。">
+<meta name="description" content="Global Health 以日本奈良为据点，做中医食材、营养料理、日美跨境医疗、干细胞考察与治疗、技术合作与转让、国际医疗活动组织与养生疗愈课程。">
 <style>
 :root{
   --ink:#1b1b16;--ink-2:#262620;--ink-3:#33332b;
@@ -23,24 +23,24 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);f
 img,svg{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 :focus-visible{outline:2px solid var(--zhe);outline-offset:3px;border-radius:2px}
-
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
 .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--zhe);margin:0 0 18px}
 .eyebrow--light{color:var(--zhe-l)}
 
 /* nav */
 .nav{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .4s ease,border-color .4s ease,backdrop-filter .4s ease;border-bottom:1px solid transparent}
-.nav.is-solid{background:rgba(251,248,241,.94);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+.nav.is-solid{background:rgba(251,248,241,.95);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
 .nav__in{max-width:var(--max);margin:0 auto;padding:0 var(--gut);display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px}
 .brand{display:flex;align-items:baseline;gap:11px;flex:none}
 .brand__mark{font-family:var(--serif);font-size:19px;letter-spacing:.05em}
 .brand__sub{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:var(--mute);text-transform:uppercase}
 .nav__right{display:flex;align-items:center;gap:clamp(12px,2vw,26px)}
-.nav__links{display:flex;gap:clamp(12px,1.9vw,26px);align-items:center}
-.nav__links a{font-size:13.5px;letter-spacing:.04em;padding:6px 0;position:relative;transition:color .25s ease}
+.nav__links{display:flex;gap:clamp(10px,1.6vw,22px);align-items:center}
+.nav__links a{font-size:13.5px;letter-spacing:.04em;padding:6px 0;position:relative;transition:color .25s ease;white-space:nowrap}
 .nav__links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--zhe);transition:width .3s ease}
 .nav__links a:hover{color:var(--zhe)}
-.nav__links a:hover::after{width:100%}
+.nav__links a:hover::after,.nav__links a.is-active::after{width:100%}
+.nav__links a.is-active{color:var(--zhe)}
 .nav__cta{border:1px solid var(--ink);padding:8px 16px !important;border-radius:2px;transition:background .25s ease,color .25s ease}
 .nav__cta::after{display:none}
 .nav__cta:hover{background:var(--ink);color:var(--paper) !important}
@@ -48,19 +48,112 @@ a{color:inherit;text-decoration:none}
 .lang:hover{border-color:var(--ink);color:var(--ink)}
 .lang b{font-weight:400;color:var(--ink)}
 .lang i{font-style:normal;opacity:.4}
-@media (max-width:980px){.nav__links a:not(.nav__cta){display:none}.nav__in{height:62px}}
+@media (max-width:1080px){.nav__links a:not(.nav__cta){display:none}.nav__in{height:62px}}
 
-/* hero */
-.hero{position:relative;background:var(--ink);color:var(--paper);padding:clamp(112px,15vh,164px) 0 clamp(56px,7vw,88px);overflow:hidden}
-.hero__grain{position:absolute;inset:0;opacity:.55;pointer-events:none}
-.hero__glow{position:absolute;top:-26%;right:-12%;width:min(820px,92vw);height:min(820px,92vw);background:radial-gradient(circle,rgba(192,138,62,.22) 0%,rgba(192,138,62,0) 66%);pointer-events:none}
-.hero__glow2{position:absolute;bottom:-34%;left:-16%;width:min(660px,80vw);height:min(660px,80vw);background:radial-gradient(circle,rgba(92,110,88,.24) 0%,rgba(92,110,88,0) 68%);pointer-events:none}
-.hero__in{position:relative;z-index:2}
-.hero__top{display:flex;align-items:flex-start;justify-content:space-between;gap:30px}
-.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(29px,5vw,60px);line-height:1.3;letter-spacing:.01em;margin:0 0 28px;max-width:18em}
-.hero h1 em{font-style:normal;color:var(--jiang)}
-.hero__lead{font-size:clamp(14.5px,1.5vw,17px);line-height:2;color:rgba(251,248,241,.76);max-width:42em;margin:0 0 40px}
-.hero__acts{display:flex;flex-wrap:wrap;gap:14px}
+/* page hero */
+.phero{position:relative;background:var(--ink);color:var(--paper);padding:clamp(104px,13vh,146px) 0 clamp(46px,6vw,72px);overflow:hidden}
+.phero__grain{position:absolute;inset:0;opacity:.5;pointer-events:none}
+.phero__glow{position:absolute;top:-40%;right:-14%;width:min(700px,88vw);height:min(700px,88vw);background:radial-gradient(circle,rgba(192,138,62,.2) 0%,rgba(192,138,62,0) 66%);pointer-events:none}
+.phero__in{position:relative;z-index:2}
+.crumb{display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:rgba(251,248,241,.45);margin-bottom:26px;flex-wrap:wrap}
+.crumb a{transition:color .25s}
+.crumb a:hover{color:var(--zhe-l)}
+.crumb span[aria-current]{color:rgba(251,248,241,.8)}
+.phero h1{font-family:var(--serif);font-weight:400;font-size:clamp(27px,4.4vw,50px);line-height:1.32;margin:0 0 22px;max-width:20em}
+.phero h1 em{font-style:normal;color:var(--jiang)}
+.phero__lead{font-size:clamp(14.5px,1.5vw,16.5px);line-height:1.98;color:rgba(251,248,241,.72);max-width:44em;margin:0}
+.phero__meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.phero__meta span{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;border:1px solid var(--line-d);padding:6px 12px;border-radius:2px;color:rgba(251,248,241,.62)}
+
+/* section */
+.sec{padding:clamp(56px,7.5vw,96px) 0}
+.sec--paper2{background:var(--paper-2)}
+.sec--ink{background:var(--ink);color:var(--paper)}
+.sec--tight{padding:clamp(40px,5vw,64px) 0}
+.sec__head{max-width:46em;margin-bottom:clamp(32px,4.4vw,52px)}
+.sec__head h2{font-family:var(--serif);font-weight:400;font-size:clamp(23px,3.1vw,36px);line-height:1.4;margin:0 0 16px}
+.sec__head p{margin:0;color:var(--mute);font-size:15px;line-height:1.92;max-width:38em}
+.sec--ink .sec__head p{color:rgba(251,248,241,.68)}
+.sec__head--wide{max-width:60em}
+
+/* prose */
+.prose{max-width:44em}
+.prose p{font-size:15px;line-height:2;color:#4a463c;margin:0 0 20px}
+.prose h3{font-family:var(--serif);font-weight:400;font-size:clamp(18px,2.2vw,23px);line-height:1.5;margin:36px 0 14px}
+.prose ul{margin:0 0 20px;padding-left:0;list-style:none}
+.prose ul li{position:relative;padding-left:16px;font-size:14.5px;line-height:1.9;color:var(--mute);margin-bottom:7px}
+.prose ul li::before{content:"";position:absolute;left:0;top:.85em;width:5px;height:1px;background:var(--zhe)}
+.prose strong{color:var(--ink);font-weight:600}
+
+/* two col */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4.5vw,64px);align-items:start}
+.split--wide{grid-template-columns:minmax(0,.75fr) minmax(0,1.55fr)}
+@media (max-width:860px){.split,.split--wide{grid-template-columns:1fr;gap:28px}}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.card{background:var(--paper);padding:clamp(24px,3vw,34px);display:flex;flex-direction:column;transition:background .3s ease}
+.card:hover{background:#fff}
+.card__no{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;color:var(--zhe);margin-bottom:16px}
+.card h3{font-family:var(--serif);font-weight:400;font-size:20px;line-height:1.45;margin:0 0 10px}
+.card p{margin:0 0 16px;font-size:13.8px;line-height:1.85;color:var(--mute)}
+.card__link{margin-top:auto;font-size:12.5px;letter-spacing:.08em;color:var(--zhe);display:inline-flex;align-items:center;gap:6px}
+.card__link::after{content:"→";transition:transform .3s ease}
+.card:hover .card__link::after{transform:translateX(4px)}
+.sec--paper2 .card{background:var(--paper-2)}
+.sec--paper2 .card:hover{background:#fff}
+
+/* table */
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table.dt{width:100%;border-collapse:collapse;min-width:640px}
+table.dt caption{text-align:left;font-size:13px;color:var(--mute);padding-bottom:14px}
+table.dt th,table.dt td{text-align:left;padding:14px 18px 14px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.72;vertical-align:top}
+table.dt thead th{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--mute-l);font-weight:400;border-bottom:1px solid var(--ink)}
+table.dt td:first-child{font-family:var(--serif);font-size:15px;white-space:nowrap}
+table.dt td:last-child{color:var(--mute);font-size:13.5px}
+table.dt tbody tr:hover{background:rgba(154,95,58,.04)}
+
+/* steps */
+.steps{counter-reset:s;display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.step{background:var(--paper);padding:clamp(20px,2.6vw,28px);display:grid;grid-template-columns:38px 1fr;gap:16px;align-items:start}
+.step__n{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--zhe);padding-top:.4em}
+.step h3{font-family:var(--serif);font-weight:400;font-size:17px;margin:0 0 7px;line-height:1.5}
+.step p{margin:0;font-size:13.6px;line-height:1.85;color:var(--mute)}
+
+/* fact strip */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line-d);border:1px solid var(--line-d)}
+.fact{background:var(--ink);padding:clamp(20px,2.6vw,28px)}
+.fact__k{font-family:var(--serif);font-size:clamp(22px,3vw,30px);line-height:1.1;color:var(--paper);margin-bottom:8px}
+.fact__d{font-size:12.5px;line-height:1.7;color:rgba(251,248,241,.6)}
+
+/* callout */
+.callout{border-left:2px solid var(--zhe);padding:4px 0 4px 22px;margin:28px 0}
+.callout p{margin:0;font-family:var(--serif);font-size:clamp(16px,2vw,19px);line-height:1.85;color:var(--ink)}
+.callout--ink{border-color:var(--zhe-l)}
+.callout--ink p{color:var(--paper)}
+
+/* note */
+.note{background:var(--paper-2);border:1px solid var(--line);padding:clamp(20px,2.6vw,28px);margin:26px 0}
+.note p{margin:0;font-size:13.8px;line-height:1.9;color:var(--mute)}
+.note strong{color:var(--ink);font-weight:600}
+
+/* faq */
+.faq{max-width:56em}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-of-type{border-top:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:22px 44px 22px 0;font-family:var(--serif);font-size:16.5px;line-height:1.6;position:relative;transition:color .25s ease}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:11px;height:11px;margin-top:-6px;border-right:1px solid var(--zhe);border-bottom:1px solid var(--zhe);transform:rotate(45deg);transition:transform .3s ease}
+.faq details[open] summary::after{transform:rotate(-135deg);margin-top:-3px}
+.faq summary:hover{color:var(--zhe)}
+.faq__a{padding:0 44px 24px 0;margin:0;font-size:14.5px;line-height:1.92;color:var(--mute)}
+
+/* cta */
+.cta{background:var(--ink);color:var(--paper);padding:clamp(50px,7vw,84px) 0;position:relative;overflow:hidden}
+.cta__glow{position:absolute;bottom:-50%;left:-10%;width:min(680px,90vw);height:min(680px,90vw);background:radial-gradient(circle,rgba(192,138,62,.2) 0%,rgba(192,138,62,0) 68%);pointer-events:none}
+.cta__in{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,56px);align-items:flex-end;justify-content:space-between}
+.cta h2{font-family:var(--serif);font-weight:400;font-size:clamp(23px,3.3vw,36px);line-height:1.4;margin:0 0 16px;max-width:18em}
+.cta p{font-size:14.5px;line-height:1.95;color:rgba(251,248,241,.7);margin:0;max-width:32em}
 .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 30px;font-size:14px;letter-spacing:.06em;border-radius:2px;border:1px solid transparent;transition:background .28s ease,color .28s ease,border-color .28s ease,transform .28s ease}
 .btn:active{transform:translateY(1px)}
 button.btn{font:inherit;cursor:pointer;border:none}
@@ -68,144 +161,178 @@ button.btn{font:inherit;cursor:pointer;border:none}
 .btn--fill:hover{background:var(--zhe-l)}
 .btn--ghost{border-color:rgba(251,248,241,.34);color:var(--paper)}
 .btn--ghost:hover{border-color:rgba(251,248,241,.72);background:rgba(251,248,241,.08)}
+.btn--ink{border-color:var(--ink);color:var(--ink)}
+.btn--ink:hover{background:var(--ink);color:var(--paper)}
 .btn__arw{font-size:15px;line-height:1}
-.seal{flex:none;width:clamp(64px,9vw,92px);height:clamp(64px,9vw,92px);opacity:.9}
-@media (max-width:640px){.seal{display:none}}
+.cta__acts{display:flex;flex-wrap:wrap;gap:12px}
 
-/* path */
-.path{position:relative;z-index:2;margin-top:clamp(52px,7.5vw,84px);border-top:1px solid var(--line-d)}
-.path__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-d)}
-.path__i{background:var(--ink);padding:28px 22px 30px 0}
-.path__k{font-family:var(--serif);font-size:clamp(25px,3.2vw,36px);line-height:1;color:var(--paper);margin-bottom:14px;display:block}
-.path__k small{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--zhe-l);display:block;margin-bottom:10px}
-.path__t{font-size:13.5px;line-height:1.7;color:rgba(251,248,241,.62)}
-@media (max-width:820px){.path__grid{grid-template-columns:repeat(2,1fr)}.path__i{padding:24px 16px 24px 0}}
+/* contact list */
+.clist{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-d);max-width:34em}
+.clist li{display:grid;grid-template-columns:86px 1fr;gap:18px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line-d)}
+.clist dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;color:rgba(251,248,241,.45);text-transform:uppercase}
+.clist dd{margin:0;font-size:15px;letter-spacing:.02em;overflow-wrap:anywhere}
 
-/* section */
-.sec{padding:clamp(66px,9vw,118px) 0}
-.sec--paper2{background:var(--paper-2)}
-.sec--ink{background:var(--ink);color:var(--paper)}
-.sec__head{max-width:46em;margin-bottom:clamp(38px,5vw,60px)}
-.sec__head h2{font-family:var(--serif);font-weight:400;font-size:clamp(24px,3.3vw,39px);line-height:1.38;margin:0 0 18px;letter-spacing:.01em}
-.sec__head p{margin:0;color:var(--mute);font-size:15px;line-height:1.92;max-width:38em}
-.sec--ink .sec__head p{color:rgba(251,248,241,.68)}
-
-/* group */
-.grp{display:flex;align-items:baseline;gap:16px;margin:0 0 26px;padding-bottom:14px;border-bottom:1px solid var(--line);flex-wrap:wrap}
-.grp:not(:first-of-type){margin-top:clamp(42px,5.5vw,66px)}
-.grp__k{font-family:var(--serif);font-size:clamp(18px,2.2vw,23px);letter-spacing:.06em}
-.grp__d{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;color:var(--mute-l);text-transform:uppercase}
-
-/* biz */
-.biz{display:grid;gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.biz__i{background:var(--paper);padding:clamp(26px,3.4vw,42px) 0;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:clamp(18px,3.2vw,52px);align-items:start}
-.biz__l{display:flex;gap:16px;align-items:baseline}
-.biz__no{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--zhe);flex:none;padding-top:.5em}
-.biz__i h3{font-family:var(--serif);font-weight:400;font-size:clamp(19px,2.4vw,26px);line-height:1.4;margin:0 0 10px}
-.biz__tag{font-size:12.5px;color:var(--mute);line-height:1.7;margin:0}
-.biz__body p{margin:0 0 18px;font-size:14.5px;line-height:1.92;color:#4a463c}
-.biz__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:8px 22px}
-.biz__list li{font-size:13.5px;color:var(--mute);padding-left:14px;position:relative;line-height:1.7}
-.biz__list li::before{content:"";position:absolute;left:0;top:.74em;width:5px;height:1px;background:var(--zhe)}
-.sec--paper2 .biz__i{background:var(--paper-2)}
-@media (max-width:820px){.biz__i{grid-template-columns:1fr;gap:18px}}
-
-/* kitchen */
-.kitchen{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(32px,5.5vw,74px);align-items:start}
-.kitchen__body p{font-size:14.8px;line-height:1.95;color:#4a463c;margin:0 0 20px}
-.kitchen__meta{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--line)}
-.kitchen__meta li{display:grid;grid-template-columns:92px 1fr;gap:18px;align-items:baseline;padding:15px 0;border-bottom:1px solid var(--line)}
-.kitchen__meta dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--mute-l);text-transform:uppercase}
-.kitchen__meta dd{margin:0;font-size:14px;line-height:1.7}
-.kitchen__card{border:1px solid var(--line);padding:clamp(24px,3.2vw,36px);background:var(--paper);position:relative}
-.kitchen__card::before{content:"";position:absolute;top:0;left:0;width:46px;height:2px;background:var(--zhe)}
-.kitchen__card h3{font-family:var(--serif);font-weight:400;font-size:21px;margin:0 0 8px;line-height:1.45}
-.kitchen__role{font-family:var(--mono);font-size:11px;letter-spacing:.13em;color:var(--zhe);margin-bottom:18px;display:block}
-.kitchen__card ul{list-style:none;margin:0;padding:0}
-.kitchen__card li{font-size:13.8px;line-height:1.85;color:var(--mute);padding:9px 0;border-top:1px solid var(--line)}
-.kitchen__card li:first-child{border-top:none}
-.kitchen__card strong{font-weight:600;color:var(--ink)}
-@media (max-width:860px){.kitchen{grid-template-columns:1fr}}
-
-/* table */
-.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
-table.course{width:100%;border-collapse:collapse;min-width:660px}
-table.course caption{text-align:left;font-size:13px;color:var(--mute);padding-bottom:14px}
-table.course th,table.course td{text-align:left;padding:15px 18px 15px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.7;vertical-align:top}
-table.course thead th{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--mute-l);font-weight:400;border-bottom:1px solid var(--ink)}
-table.course td:first-child{font-family:var(--serif);font-size:15.5px}
-table.course td:last-child{color:var(--mute);font-size:13.5px}
-table.course tbody tr:hover{background:rgba(154,95,58,.04)}
-
-/* why */
-.why{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line-d);border:1px solid var(--line-d)}
-.why__i{background:var(--ink);padding:clamp(24px,3vw,34px)}
-.why__k{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--zhe-l);margin-bottom:14px}
-.why__i h3{font-family:var(--serif);font-weight:400;font-size:18.5px;margin:0 0 10px;line-height:1.5}
-.why__i p{margin:0;font-size:13.8px;line-height:1.86;color:rgba(251,248,241,.66)}
-@media (max-width:760px){.why{grid-template-columns:1fr}}
-
-/* founder */
-.founder{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.5fr);gap:clamp(32px,5.5vw,76px);align-items:start}
-.founder__id{border-top:2px solid var(--zhe);padding-top:26px}
-.founder__name{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.4vw,38px);line-height:1.3;margin:0 0 6px}
-.founder__en{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--mute);text-transform:uppercase;margin:0 0 22px}
-.founder__role{font-size:14px;line-height:1.8;color:var(--zhe);margin:0 0 24px;letter-spacing:.03em}
-.founder__tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.founder__tags li{font-size:12px;letter-spacing:.04em;color:var(--mute);border:1px solid var(--line);padding:6px 12px;border-radius:2px;line-height:1.4}
-.founder__body p{font-size:14.8px;line-height:2;color:#4a463c;margin:0 0 20px}
-.founder__body p:last-child{margin-bottom:0}
-.founder__quote{font-family:var(--serif);font-size:clamp(17px,2.1vw,21px);line-height:1.85;color:var(--ink);border-left:2px solid var(--zhe);padding-left:22px;margin:0 0 26px}
-@media (max-width:860px){.founder{grid-template-columns:1fr;gap:32px}}
-
-/* faq */
-.faq{max-width:56em}
-.faq details{border-bottom:1px solid var(--line)}
-.faq details:first-of-type{border-top:1px solid var(--line)}
-.faq summary{cursor:pointer;list-style:none;padding:23px 44px 23px 0;font-family:var(--serif);font-size:17px;line-height:1.6;position:relative;transition:color .25s ease}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:11px;height:11px;margin-top:-6px;border-right:1px solid var(--zhe);border-bottom:1px solid var(--zhe);transform:rotate(45deg);transition:transform .3s ease}
-.faq details[open] summary::after{transform:rotate(-135deg);margin-top:-3px}
-.faq summary:hover{color:var(--zhe)}
-.faq__a{padding:0 44px 26px 0;margin:0;font-size:14.5px;line-height:1.92;color:var(--mute)}
-
-/* contact */
-.contact{background:var(--ink);color:var(--paper);padding:clamp(66px,9vw,112px) 0;position:relative;overflow:hidden}
-.contact__glow{position:absolute;bottom:-42%;left:-12%;width:min(720px,92vw);height:min(720px,92vw);background:radial-gradient(circle,rgba(192,138,62,.2) 0%,rgba(192,138,62,0) 68%);pointer-events:none}
-.contact__in{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(36px,6vw,76px);align-items:start}
-.contact h2{font-family:var(--serif);font-weight:400;font-size:clamp(25px,3.6vw,40px);line-height:1.36;margin:0 0 20px}
-.contact__lead{font-size:15px;line-height:1.95;color:rgba(251,248,241,.72);margin:0 0 34px;max-width:28em}
-.contact__list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-d)}
-.contact__list li{display:grid;grid-template-columns:86px 1fr;gap:18px;align-items:baseline;padding:17px 0;border-bottom:1px solid var(--line-d)}
-.contact__list dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;color:rgba(251,248,241,.45);text-transform:uppercase}
-.contact__list dd{margin:0;font-size:15px;letter-spacing:.02em;overflow-wrap:anywhere}
-@media (max-width:860px){.contact__in{grid-template-columns:1fr}}
+/* next/prev */
+.next{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.next a{background:var(--paper);padding:clamp(22px,2.8vw,30px);transition:background .3s ease;display:block}
+.next a:hover{background:#fff}
+.next__k{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--mute-l);margin-bottom:9px}
+.next__t{font-family:var(--serif);font-size:18px;line-height:1.45;display:flex;align-items:center;gap:8px}
+.next__t::after{content:"→";font-size:14px;color:var(--zhe);transition:transform .3s ease}
+.next a:hover .next__t::after{transform:translateX(4px)}
 
 /* footer */
 .foot{background:#131310;color:var(--mute-l);padding:34px 0;font-size:12.5px;letter-spacing:.03em}
 .foot__in{max-width:var(--max);margin:0 auto;padding:0 var(--gut);display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:space-between;align-items:center}
 .foot__in span{line-height:1.7}
+.foot a{transition:color .25s}
+.foot a:hover{color:var(--paper)}
 
 /* reveal */
 .rv{opacity:1;transform:none}
 @media (prefers-reduced-motion:no-preference){
-  .rv{opacity:0;transform:translateY(18px);transition:opacity .75s cubic-bezier(.2,.7,.3,1),transform .75s cubic-bezier(.2,.7,.3,1)}
+  .rv{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
   .rv.is-in{opacity:1;transform:none}
 }
+
+/* program item */
+.prog{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(22px,3.4vw,46px);align-items:start;padding:clamp(30px,4vw,48px) 0;border-bottom:1px solid var(--line)}
+.prog:first-of-type{border-top:1px solid var(--line)}
+.prog__media{position:relative;overflow:hidden;background:var(--paper-3);aspect-ratio:16/10}
+.prog__media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.3,1)}
+.prog:hover .prog__media img{transform:scale(1.035)}
+.prog__no{position:absolute;top:0;left:0;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:10px;letter-spacing:.14em;padding:6px 11px}
+.prog__body h3{font-family:var(--serif);font-weight:400;font-size:clamp(20px,2.5vw,27px);line-height:1.4;margin:0 0 7px}
+.prog__tag{font-size:12.5px;color:var(--mute);margin:0 0 16px;letter-spacing:.02em}
+.prog__body p{font-size:14.5px;line-height:1.94;color:#4a463c;margin:0 0 15px}
+.prog__body ul{list-style:none;margin:0 0 4px;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:5px 20px}
+.prog__body ul li{position:relative;padding-left:14px;font-size:13.4px;line-height:1.75;color:var(--mute)}
+.prog__body ul li::before{content:"";position:absolute;left:0;top:.78em;width:5px;height:1px;background:var(--zhe)}
+.price{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;margin:20px 0 12px;padding-top:16px;border-top:1px solid var(--line)}
+.price__k{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--mute-l);text-transform:uppercase;flex:none}
+.price__n{font-family:var(--serif);font-size:clamp(18px,2.2vw,23px);color:var(--ink);line-height:1.3}
+.price__d{font-size:12px;color:var(--mute)}
+.mrow{display:flex;flex-wrap:wrap;gap:5px 20px}
+.mrow span{font-size:12.4px;color:var(--mute);line-height:1.7}
+.mrow b{font-weight:600;color:var(--ink)}
+@media (max-width:860px){.prog{grid-template-columns:1fr;gap:20px}}
+
+/* banner image */
+.banner{position:relative;overflow:hidden;background:var(--paper-3)}
+.banner img{width:100%;height:clamp(200px,38vw,420px);object-fit:cover;display:block}
+.banner__cap{position:absolute;left:0;bottom:0;right:0;background:linear-gradient(to top,rgba(19,19,16,.72),rgba(19,19,16,0));color:var(--paper);padding:26px clamp(18px,3vw,32px) 18px;font-size:12.5px;letter-spacing:.04em}
+
+/* form */
+.form{display:grid;gap:16px;max-width:44em}
+.fld{display:grid;gap:7px}
+.fld label{font-size:12.5px;letter-spacing:.04em;color:var(--mute)}
+.fld label b{color:var(--zhu-s);font-weight:400}
+.fld input,.fld select,.fld textarea{width:100%;font:inherit;font-size:14.5px;padding:12px 14px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:2px;transition:border-color .25s ease,background .25s ease}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--zhe);background:#fff}
+.fld textarea{min-height:112px;resize:vertical;line-height:1.8}
+.fld--row{grid-template-columns:1fr 1fr;gap:16px}
+.fld--row>div{display:grid;gap:7px}
+@media (max-width:620px){.fld--row{grid-template-columns:1fr}}
+
+/* tables */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);background:var(--paper)}
+table{width:100%;border-collapse:collapse;min-width:620px}
+caption{caption-side:top;text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);padding:14px 18px;border-bottom:1px solid var(--line)}
+th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line);font-size:13.5px;line-height:1.7;vertical-align:top}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);background:var(--paper-2);font-weight:400}
+tbody tr:last-child td{border-bottom:0}
+
+/* timeline */
+.timeline{border-top:1px solid var(--line)}
+.tl{display:grid;grid-template-columns:64px minmax(0,1fr);gap:clamp(14px,2.4vw,32px);padding:clamp(22px,3vw,34px) 0;border-bottom:1px solid var(--line)}
+.tl__y{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--zhe);padding-top:4px}
+.tl h3{font-family:var(--serif);font-weight:400;font-size:clamp(18px,2.1vw,22px);margin:0 0 8px}
+.tl p{margin:0;font-size:14px;line-height:1.9;color:var(--mute)}
+
+/* chain */
+.chain{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(14px,2.2vw,26px)}
+.chain__i{border:1px solid var(--line);padding:clamp(22px,2.6vw,32px);background:var(--paper)}
+.chain__k{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--zhe);margin-bottom:12px}
+.chain__i h3{font-family:var(--serif);font-weight:400;font-size:19px;margin:0 0 9px}
+.chain__i p{margin:0;font-size:13.5px;line-height:1.86;color:var(--mute)}
+
+/* pullquote */
+.pullquote{margin:0 0 22px;padding:0 0 0 22px;border-left:2px solid var(--zhe)}
+.pullquote p{font-family:var(--serif);font-size:clamp(19px,2.4vw,26px);line-height:1.72;margin:0;color:var(--ink)}
+
+/* founder figure */
+.founder__fig{margin:0}
+.founder__fig img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:var(--paper-3)}
+.founder__fig figcaption{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--mute);margin-top:11px;line-height:1.7}
+
+/* info list */
+.cinfo{margin:0;border-top:1px solid var(--line)}
+.cinfo>div{display:grid;grid-template-columns:minmax(78px,.4fr) minmax(0,1fr);gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.cinfo dt{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--mute);padding-top:3px}
+.cinfo dd{margin:0;font-size:13.5px;line-height:1.75}
+
+/* home hero */
+.hero{position:relative;min-height:clamp(560px,88vh,820px);display:flex;align-items:flex-end;overflow:hidden;background:var(--ink);color:var(--paper);padding:clamp(90px,12vh,140px) 0 clamp(46px,7vh,80px)}
+.hero__bg{position:absolute;inset:0}
+.hero__bg img{width:100%;height:100%;object-fit:cover;opacity:.42}
+.hero__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,27,22,.72) 0%,rgba(27,27,22,.42) 42%,rgba(27,27,22,.92) 100%)}
+.hero__in{position:relative;z-index:2;width:100%}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,6.4vw,76px);line-height:1.16;letter-spacing:-.01em;margin:0 0 22px;max-width:17em}
+.hero h1 em{font-style:normal;color:var(--zhe-l)}
+.hero__lead{font-size:clamp(14.5px,1.5vw,17px);line-height:1.92;color:rgba(251,248,241,.78);max-width:44em;margin:0 0 30px}
+.hero__acts{display:flex;flex-wrap:wrap;gap:12px}
+.hero__meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;padding-top:22px;border-top:1px solid var(--line-d);font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(251,248,241,.6)}
+.hero .btn--ghost{border-color:rgba(251,248,241,.4);color:var(--paper)}
+.hero .btn--ghost:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+
+/* entry cards */
+.entries{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:clamp(14px,2.2vw,26px)}
+.entry{position:relative;border:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column;overflow:hidden;transition:border-color .35s ease}
+.entry:hover{border-color:rgba(154,95,58,.55)}
+.entry__img{aspect-ratio:16/10;overflow:hidden;background:var(--paper-3)}
+.entry__img img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.3,1)}
+.entry:hover .entry__img img{transform:scale(1.045)}
+.entry__b{padding:clamp(20px,2.4vw,28px);display:flex;flex-direction:column;flex:1}
+.entry__k{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--zhe);margin-bottom:11px}
+.entry h3{font-family:var(--serif);font-weight:400;font-size:21px;line-height:1.42;margin:0 0 9px}
+.entry p{margin:0 0 16px;font-size:13.5px;line-height:1.84;color:var(--mute)}
+.entry__go{margin-top:auto;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--zhe)}
+
+.fnote{font-size:12px;color:var(--mute-l);line-height:1.7;margin:0}
+.fmsg{font-size:13.5px;line-height:1.7;padding:13px 15px;border-radius:2px;display:none}
+.fmsg.is-ok{display:block;background:rgba(92,110,88,.12);border:1px solid rgba(92,110,88,.4);color:#3f4d3c}
+.fmsg.is-err{display:block;background:rgba(168,51,44,.08);border:1px solid rgba(168,51,44,.35);color:#8b2b25}
+button.btn[disabled]{opacity:.6;cursor:default}
+
+/* product grid */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:clamp(16px,2.4vw,28px)}
+.pcard{border:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column;transition:border-color .3s ease}
+.pcard:hover{border-color:rgba(154,95,58,.5)}
+.pcard__img{aspect-ratio:1/1;overflow:hidden;background:var(--paper-3)}
+.pcard__img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.3,1)}
+.pcard:hover .pcard__img img{transform:scale(1.04)}
+.pcard__body{padding:clamp(16px,2vw,22px);display:flex;flex-direction:column;flex:1}
+.pcard__k{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--zhe);margin-bottom:10px;text-transform:uppercase}
+.pcard h3{font-family:var(--serif);font-weight:400;font-size:19px;line-height:1.45;margin:0 0 7px}
+.pcard__spec{font-size:12.5px;color:var(--mute);line-height:1.7;margin:0 0 12px}
+.pcard__p{font-family:var(--serif);font-size:19px;margin:auto 0 4px;color:var(--ink)}
+.pcard__p small{font-family:var(--sans);font-size:11.5px;color:var(--mute);margin-left:5px}
+.pcard__act{margin-top:14px}
+.pcard__act .btn{width:100%;justify-content:center;padding:11px 16px;font-size:13px}
+.sec--paper2 .pcard{background:var(--paper-2)}
 
 /* print */
 @media print{
   .nav{position:static;background:none;border-bottom:1px solid #999}
   .nav__links,.lang{display:none}
-  .hero,.sec--ink,.contact{background:#fff !important;color:#000 !important}
-  .hero h1,.hero__lead,.path__k,.path__t,.sec--ink .sec__head p,
-  .biz__body p,.biz__list li,.why__i p,.why__i h3,.contact__lead{color:#000 !important}
-  .hero__grain,.hero__glow,.hero__glow2,.contact__glow{display:none}
-  .path__i,.why__i{background:#fff !important;border:1px solid #ccc}
-  .biz__i,.kitchen__card{background:#fff !important}
+  .phero,.sec--ink,.cta{background:#fff !important;color:#000 !important}
+  .phero h1,.phero__lead,.phero__meta span,.fact__k,.fact__d,.callout--ink p,.cta p,.cta h2,.clist dt,.clist dd,.sec--ink .sec__head p{color:#000 !important}
+  .phero__grain,.phero__glow,.cta__glow{display:none}
+  .fact,.card,.step{background:#fff !important}
+  .fact,.steps,.next,.cards{border:1px solid #ccc}
   .rv{opacity:1 !important;transform:none !important}
   .btn{border:1px solid #000;color:#000 !important;background:none !important}
-  .sec{padding:26px 0;break-inside:avoid}
+  .sec{padding:24px 0;break-inside:avoid}
   .faq details{break-inside:avoid}
   .faq__a{display:block}
   a[href^="http"]::after{content:" (" attr(href) ")";font-size:10px;color:#555}
@@ -213,22 +340,22 @@ table.course tbody tr:hover{background:rgba(154,95,58,.04)}
 </style>
 </head>
 <body>
-
-<header class="nav" id="nav">
+<header class="nav is-solid" id="nav">
   <div class="nav__in">
-    <a class="brand" href="#top">
+    <a class="brand" href="index.html">
       <span class="brand__mark">Global Health</span>
       <span class="brand__sub">Nara · Japan</span>
     </a>
     <div class="nav__right">
       <nav class="nav__links" aria-label="页面导航">
-        <a href="#business" data-en="What We Do">业务</a>
-        <a href="#kitchen" data-en="Kitchen">料理教室</a>
-        <a href="#courses" data-en="Programs">课程</a>
-        <a href="#why" data-en="Why Us">为什么是我们</a>
-        <a href="#founder" data-en="Founder">创始人</a>
-        <a href="#faq" data-en="FAQ">问答</a>
-        <a class="nav__cta" href="#contact" data-en="Contact">联系我们</a>
+        <a href="food.html" data-en="Food">食养</a>
+        <a href="medical.html" data-en="Medical">跨境医疗</a>
+        <a href="stemcell.html" data-en="Stem Cells">干细胞</a>
+        <a href="business.html" data-en="Partnership">商务合作</a>
+        <a href="courses.html" data-en="Programs">课程</a>
+        <a href="product.html" data-en="Products">产品</a>
+        <a href="about.html" data-en="About">关于</a>
+        <a class="nav__cta" href="index.html#contact" data-en="Contact">联系</a>
       </nav>
       <button type="button" class="lang" id="lang-btn" aria-label="切换语言 / Switch language">
         <b id="lang-zh">中文</b><i>/</i><span id="lang-en">EN</span>
@@ -236,542 +363,216 @@ table.course tbody tr:hover{background:rgba(154,95,58,.04)}
     </div>
   </div>
 </header>
-
-<main id="top">
-
-  <!-- HERO -->
+<main>
   <section class="hero">
-    <svg class="hero__grain" aria-hidden="true" viewBox="0 0 1200 800" preserveAspectRatio="none" width="100%" height="100%">
-      <defs><pattern id="grain" width="68" height="68" patternUnits="userSpaceOnUse"><path d="M68 0H0V68" fill="none" stroke="rgba(251,248,241,.05)" stroke-width="1"/></pattern></defs>
-      <rect width="100%" height="100%" fill="url(#grain)"/>
-    </svg>
-    <div class="hero__glow" aria-hidden="true"></div>
-    <div class="hero__glow2" aria-hidden="true"></div>
-
+    <div class="hero__bg">
+      <img src="https://hikaruhuimin.github.io/global-health-site/images/forest.jpg" alt="奈良吉野杉木林中的晨雾" fetchpriority="high">
+    </div>
     <div class="wrap hero__in">
-      <div class="hero__top">
-        <div>
-          <p class="eyebrow eyebrow--light">Food · Medicine · Wellbeing</p>
-          <h1 data-en="From three meals a day,<br>to a <em>complete health management</em>">从一日三餐，<br>到一次<em>彻底的健康管理</em></h1>
-        </div>
-        <svg class="seal" viewBox="0 0 100 100" role="img" aria-labelledby="seal-t">
-          <title id="seal-t">Global Health seal</title>
-          <rect x="4" y="4" width="92" height="92" rx="3" fill="none" stroke="#a8332c" stroke-width="2.4"/>
-          <rect x="10" y="10" width="80" height="80" rx="2" fill="none" stroke="#a8332c" stroke-width=".9" opacity=".55"/>
-          <text x="50" y="46" text-anchor="middle" font-family="Songti SC,STSong,serif" font-size="30" fill="#a8332c">食</text>
-          <text x="50" y="80" text-anchor="middle" font-family="Songti SC,STSong,serif" font-size="30" fill="#a8332c">養</text>
-        </svg>
-      </div>
-
-      <p class="hero__lead" data-en="Chinese medicinal ingredients, nutritional cuisine, cross-border medical care in Japan and the US, stem cell programs, technology equity partnerships, international medical events, and wellbeing courses. We connect what you eat, how you restore, how you treat, and who you walk with — into one continuous path.">
-        中医食材、营养料理、日美跨境医疗、干细胞考察与治疗、技术股合作对接、
-        国际医疗活动组织、养生与疗愈课程。
-        我们把「吃什么」「怎么调」「怎么治」「和谁一起」串成一条完整的路径。
-      </p>
-
+      <p class="eyebrow eyebrow--light">Global Health · Nara, Japan</p>
+      <h1 data-en="From the table to the clinic — <em>one line</em>">从餐桌，到诊室，<em>一条线</em></h1>
+      <p class="hero__lead" data-en="Ingredients and herbs are the materials. Cooking classes and health management are the services. Hospitals in Japan and the US are the treatment. Most platforms do one segment. This one connects all three — so that a person can stay, instead of being handed off.">食材与药材是材料，料理课程与健康管理是服务，日本和美国的医院是治疗。多数平台只做其中一段。我们把三段接起来——让一个人可以一直待在这儿，而不是被来回转手。</p>
       <div class="hero__acts">
-        <a class="btn btn--fill" href="#business"><span data-en="What We Do">看看我们做什么</span><span class="btn__arw" aria-hidden="true">→</span></a>
-        <a class="btn btn--ghost" href="#contact" data-en="Tell us your situation">聊聊你的情况</a>
+        <a class="btn btn--fill" href="#services" data-en="See the services">看业务</a>
+        <a class="btn btn--ghost" href="contact.html" data-en="Book a conversation">预约咨询</a>
       </div>
+      <div class="hero__meta">
+        <span data-en="Materials · Services · Treatment">材料 · 服务 · 治疗</span>
+        <span data-en="Chinese · 日本語 · English">中文 · 日本語 · English</span>
+        <span data-en="Kansai based, not remote">关西常驻，不是远程中介</span>
+      </div>
+    </div>
+  </section>
 
-      <div class="path" id="path">
-        <div class="path__grid">
-          <div class="path__i">
-            <span class="path__k"><small>01 / EAT</small><span data-en="Eat">食</span></span>
-            <span class="path__t" data-en="Chinese medicinal ingredients and nutritional cuisine. Start with what is on your table every day.">中医食材与营养料理<br>先把每天吃的东西理顺</span>
-          </div>
-          <div class="path__i">
-            <span class="path__k"><small>02 / CHECK</small><span data-en="Check">检</span></span>
-            <span class="path__t" data-en="Precision screening in Japan, medical access in the US. Know your baseline.">日本精密体检 · 美国医疗<br>把身体的底数查清楚</span>
-          </div>
-          <div class="path__i">
-            <span class="path__k"><small>03 / HEAL</small><span data-en="Heal">疗</span></span>
-            <span class="path__t" data-en="Stem cell treatment and technology partnerships. Treat what needs treating.">干细胞治疗 · 技术合作<br>该治的治，该合的合</span>
-          </div>
-          <div class="path__i">
-            <span class="path__k"><small>04 / GATHER</small><span data-en="Gather">聚</span></span>
-            <span class="path__t" data-en="International medical events and community. Walk further with company.">国际医疗活动与社群<br>和同路人一起走得更远</span>
-          </div>
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec__head rv">
+        <p class="eyebrow">The Chain</p>
+        <h2 data-en="Three layers, deliberately connected">三层，故意接在一起</h2>
+        <p data-en="A person who comes for a cooking class may need a screening two years later. A person who comes back from a screening needs to know what to eat for the next ten years. Splitting these into separate businesses is how most health platforms lose the person in between.">来上料理课的人，两年后可能需要体检；体检回来的人，需要知道接下来十年怎么吃。把这几件事拆成不同生意，就是多数健康平台在中间把人弄丢的方式。</p>
+      </div>
+      <div class="chain rv">
+        <div class="chain__i">
+          <span class="chain__k">01 · Materials</span>
+          <h3 data-en="What you take home">带回家的东西</h3>
+          <p data-en="Medicinal herbs from named origins, soup kits, ceremonial matcha, and a shampoo line made with Chinese medicine formulation. Daily-use objects, not souvenirs.">有明确产地的道地药材、药膳汤包、ceremonial 级抹茶，以及用中药配方做的洗发水。是每天在用的东西，不是纪念品。</p>
+        </div>
+        <div class="chain__i">
+          <span class="chain__k">02 · Services</span>
+          <h3 data-en="What changes behaviour">改变行为的那一段</h3>
+          <p data-en="Cooking classes, seasonal wellbeing programmes, forest and onsen retreats, one-to-one health management. Nobody changes their diet because of a report. They change it because they cooked it once.">料理课、节气养生课、森林与温泉疗愈、一对一健康管理。没有人因为一份报告改变饮食，是因为自己动手做过一次。</p>
+        </div>
+        <div class="chain__i">
+          <span class="chain__k">03 · Treatment</span>
+          <h3 data-en="What only medicine can do">只有医疗能做的</h3>
+          <p data-en="Precision screening, cancer treatment coordination, regenerative medicine, and US consultations and trials. We coordinate; the institution's physicians decide.">精密体检、癌症治疗对接、再生医疗、美国会诊与临床试验。我们负责协调，判断由机构医生做。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BUSINESS -->
-  <section class="sec" id="business">
+  <section class="sec sec--paper2" id="services">
     <div class="wrap">
       <div class="sec__head rv">
-        <p class="eyebrow">What We Do</p>
-        <h2 data-en="Eight practices,<br>one path from the table to the clinic">八大业务，<br>一条从餐桌到诊室的路径</h2>
-        <p data-en="Most people pick one end — either they sell ingredients, or they broker medical care. We connect both, because half of what determines your health is in the kitchen, and half is in the hospital.">别人只做一头：要么卖食材，要么做医疗中介。我们把两头接上——因为真正决定健康的东西，一半在厨房，一半在医院。</p>
+        <p class="eyebrow">Services</p>
+        <h2 data-en="What we actually do">我们具体做什么</h2>
+        <p data-en="Six lines of work. Each has its own page with the detail, the price range and the way to start.">六条线。每条都有自己的页面，写清细节、价格区间，以及怎么开始。</p>
       </div>
-
-      <div class="grp rv">
-        <span class="grp__k" data-en="Food">食养</span>
-        <span class="grp__d">Daily · Food</span>
-      </div>
-      <div class="biz rv">
-        <article class="biz__i">
-          <div class="biz__l">
-            <span class="biz__no">01</span>
-            <div>
-              <h3 data-en="Chinese Medicinal Ingredients">中医食材</h3>
-              <p class="biz__tag" data-en="Food as medicine · Matched to your constitution">药食同源 · 按体质选材</p>
-            </div>
+      <div class="entries rv">
+        <a class="entry" href="food.html">
+          <div class="entry__img"><img src="https://hikaruhuimin.github.io/global-health-site/images/herbs.jpg" alt="俯拍的中药材" loading="lazy"></div>
+          <div class="entry__b">
+            <span class="entry__k">Materials · 01</span>
+            <h3 data-en="Food and Cuisine">食养与料理</h3>
+            <p data-en="Body-constitution assessment, seasonal menus, medicinal soup formulas, and hands-on classes in Nara.">体质辨识、节气菜单、药膳汤方，以及在奈良动手做的料理课。</p>
+            <span class="entry__go" data-en="From ¥7,000">¥7,000 起</span>
           </div>
-          <div class="biz__body">
-            <p data-en="We do not sell herbs as supplements. We first identify your constitution, then decide what to eat, how much, and when. Seasonal produce sourced locally in Japan; authentic herbs shipped directly from their growing regions in China — every batch traceable to origin.">不是把中药材当保健品卖。是先看你是什么体质，再决定吃什么、吃多少、什么时候吃。日本本地采买当季食材，道地药材从国内产区直供，每批能说清产地和批次。</p>
-            <ul class="biz__list">
-              <li data-en="Constitution assessment and ingredient list">体质辨识与选材清单</li>
-              <li data-en="Authentic herbs from source regions">道地药材产区直供</li>
-              <li data-en="Origin and batch traceability">产地与批次可追溯</li>
-              <li data-en="Seasonal pairing guidance">节气食材搭配建议</li>
-              <li data-en="Small-batch household packs">小批量家庭装定制</li>
-              <li data-en="Usage and storage guidance">食材使用与储存指导</li>
-            </ul>
+        </a>
+        <a class="entry" href="product.html">
+          <div class="entry__img"><img src="https://hikaruhuimin.github.io/global-health-site/images/shampoo.jpg" alt="中药洗发水玻璃瓶" loading="lazy"></div>
+          <div class="entry__b">
+            <span class="entry__k">Materials · 02</span>
+            <h3 data-en="Products">产品</h3>
+            <p data-en="Medicinal shampoo, soup kits, ceremonial matcha, herb gift sets. Ordered through the booking form, confirmed within 24 hours.">中药洗发水、药膳汤包、抹茶、药材礼盒。通过预约表单下单，24 小时内确认。</p>
+            <span class="entry__go" data-en="From ¥4,200">¥4,200 起</span>
           </div>
-        </article>
-
-        <article class="biz__i">
-          <div class="biz__l">
-            <span class="biz__no">02</span>
-            <div>
-              <h3 data-en="Nutritional Cuisine">营养料理</h3>
-              <p class="biz__tag" data-en="Cooking classes · Meal plans · Private dining">料理教室 · 膳食方案 · 私宴</p>
-            </div>
+        </a>
+        <a class="entry" href="courses.html">
+          <div class="entry__img"><img src="https://hikaruhuimin.github.io/global-health-site/images/onsen.jpg" alt="温泉露天风吕夜景" loading="lazy"></div>
+          <div class="entry__b">
+            <span class="entry__k">Services · 03</span>
+            <h3 data-en="Wellbeing Programmes">养生与疗愈课程</h3>
+            <p data-en="Eight programmes: constitution basics, seasonal health, soup formulas, mindful breathing, forest bathing, onsen retreats, one-to-one.">八门课：体质辨识、节气养生、药膳汤方、正念呼吸、森林浴、温泉疗养、一对一。</p>
+            <span class="entry__go" data-en="From ¥8,000">¥8,000 起</span>
           </div>
-          <div class="biz__body">
-            <p data-en="Not a restaurant — a place that teaches you to cook. Seasonal ingredients, dishes that taste good and do good. Our Chinese cooking studio in Oji, Nara is already running, and it is the physical home of every offline program we offer.">不是餐厅，是教你做饭的地方。用当季食材，做出既好吃又对身体有用的菜。奈良王寺的中华料理教室已经在跑，定期开课，也是所有线下课程的实体场地。</p>
-            <ul class="biz__list">
-              <li data-en="Chinese cooking studio in Oji">中华料理教室（王寺常设）</li>
-              <li data-en="Constitution-based meal plans">体质膳食方案设计</li>
-              <li data-en="Twenty-four solar term menus">二十四节气菜单</li>
-              <li data-en="Solo and small-family meal prep">一人食与小家庭配餐</li>
-              <li data-en="Private dining and event catering">私宴与活动餐饮</li>
-              <li data-en="Corporate healthy-menu advisory">企业健康餐顾问</li>
-            </ul>
+        </a>
+        <a class="entry" href="medical.html">
+          <div class="entry__img"><img src="https://hikaruhuimin.github.io/global-health-site/images/scan.jpg" alt="PET-CT 检查设备" loading="lazy"></div>
+          <div class="entry__b">
+            <span class="entry__k">Treatment · 04</span>
+            <h3 data-en="Cross-border Care">跨境医疗</h3>
+            <p data-en="Japan precision screening, cancer treatment coordination, and US specialist consultation and trial access.">日本精密体检、癌症治疗对接，美国专家会诊与临床试验。</p>
+            <span class="entry__go" data-en="Screening from ¥180,000">体检 ¥180,000 起</span>
           </div>
-        </article>
-      </div>
-
-      <div class="grp rv">
-        <span class="grp__k" data-en="Medical">医疗</span>
-        <span class="grp__d">Medical · Japan / US</span>
-      </div>
-      <div class="biz rv">
-        <article class="biz__i">
-          <div class="biz__l">
-            <span class="biz__no">03</span>
-            <div>
-              <h3 data-en="Cross-border Medical Services">跨境医疗服务</h3>
-              <p class="biz__tag" data-en="Precision screening in Japan · US medical access · Full Chinese support">日本精密体检 · 美国医疗资源 · 全程中文</p>
-            </div>
+        </a>
+        <a class="entry" href="stemcell.html">
+          <div class="entry__img"><img src="https://hikaruhuimin.github.io/global-health-site/images/lab.jpg" alt="细胞培养实验室超净台" loading="lazy"></div>
+          <div class="entry__b">
+            <span class="entry__k">Treatment · 05</span>
+            <h3 data-en="Stem Cells">干细胞</h3>
+            <p data-en="Facility visits, filing verification, lab inspection and case data review — before any money moves.">机构考察、备案核验、实验室与病例数据核查——都在付钱之前。</p>
+            <span class="entry__go" data-en="Visit from ¥80,000">考察 ¥80,000 起</span>
           </div>
-          <div class="biz__body">
-            <p data-en="Based in Kansai, Japan, with channels into the US. In Japan: precision screening, regenerative medicine, cancer treatment coordination. In the US: expert consultations, clinical trial enrolment, advanced care. We recommend by condition, not by commission.">日本关西为据点，同时打通美国医疗渠道。日本做精密体检、再生医疗和癌症治疗对接；美国做专家会诊、临床试验入组与高端治疗。两边各有各的强项，我们按病情推荐，不按佣金推荐。</p>
-            <ul class="biz__list">
-              <li data-en="PET-CT precision screening in Japan">日本 PET-CT 精密体检</li>
-              <li data-en="Regenerative medicine and cancer care in Japan">日本再生医疗与癌症治疗</li>
-              <li data-en="Remote consultation with US specialists">美国专家远程会诊</li>
-              <li data-en="US clinical trial eligibility review">美国临床试验入组评估</li>
-              <li data-en="Medical record translation and preparation">病历翻译与资料整理</li>
-              <li data-en="Medical visa support and in-country accompaniment">医疗签证与在境陪诊</li>
-            </ul>
+        </a>
+        <a class="entry" href="business.html">
+          <div class="entry__img"><img src="https://hikaruhuimin.github.io/global-health-site/images/kitchen.jpg" alt="中式厨房中炒菜的双手" loading="lazy"></div>
+          <div class="entry__b">
+            <span class="entry__k">Business · 06</span>
+            <h3 data-en="Partnership">技术合作</h3>
+            <p data-en="Technology equity, licensing, joint ventures, OEM — plus international medical delegations, forums and study programmes.">技术入股、许可、合资、OEM，以及国际医疗考察团、论坛与研修。</p>
+            <span class="entry__go" data-en="By email">商务走邮箱</span>
           </div>
-        </article>
-
-        <article class="biz__i">
-          <div class="biz__l">
-            <span class="biz__no">04</span>
-            <div>
-              <h3 data-en="Stem Cell Programs">干细胞考察与治疗</h3>
-              <p class="biz__tag" data-en="Facility visits · Clinical treatment · Verifiable preparation records">机构考察 · 临床治疗 · 制备全程可查</p>
-            </div>
-          </div>
-          <div class="biz__body">
-            <p data-en="Stem cells are the part of Japanese regenerative medicine that most needs scrutiny. A site visit is not a tour — you go into the lab, see how cells are cultured, read the filing documents, review the case data. We only work with filed facilities that can produce complete preparation records. No records, no referral.">干细胞是日本再生医疗里最需要看清楚的一块。考察不是参观，是进实验室看细胞怎么培养、看备案文件、看既往病例数据。治疗只对接能出具完整制备记录的备案机构，拿不出记录的，我们不接。</p>
-            <ul class="biz__list">
-              <li data-en="On-site visits to Japanese stem cell facilities">日本干细胞机构实地考察</li>
-              <li data-en="Laboratory and culture process walkthrough">实验室与制备流程参观</li>
-              <li data-en="Filing status and case data review">备案资质与病例数据核验</li>
-              <li data-en="Autologous stem cell treatment referral">自体干细胞治疗对接</li>
-              <li data-en="Immune cell therapy">免疫细胞疗法</li>
-              <li data-en="Pre-treatment assessment and follow-up">治疗前后评估与随访</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="biz__i">
-          <div class="biz__l">
-            <span class="biz__no">05</span>
-            <div>
-              <h3 data-en="Technology Equity and Industry Partnerships">技术股与产业合作</h3>
-              <p class="biz__tag" data-en="Technology transfer · Joint ventures · Equity structuring">技术引进 · 合资落地 · 股权设计</p>
-            </div>
-          </div>
-          <div class="biz__body">
-            <p data-en="For Chinese hospitals, investors and industry partners. We bring Japanese and American technology and teams in through technology equity, joint ventures and exclusive licensing. We handle due diligence, negotiation and execution — not as a middleman passing paper. For technology cooperation, licensing and transfer, write directly to info@ghealthorg.com.">面向中国医疗机构、投资方和产业方。把日本、美国的技术和团队引进来，以技术入股、合资公司、独家授权等方式落地。我们做前期尽调、对接谈判和落地执行，不当中介转手。技术合作、技术转让等商务事宜，请直接发邮件到 info@ghealthorg.com。</p>
-            <ul class="biz__list">
-              <li data-en="Due diligence and screening of Japanese and US technology partners">日美技术方尽调与筛选</li>
-              <li data-en="Technology equity and joint venture structuring">技术入股与合资架构</li>
-              <li data-en="Exclusive licensing and regional distribution">独家授权与区域代理</li>
-              <li data-en="Clinical resource and expert alignment">临床资源与专家绑定</li>
-              <li data-en="Entity setup and compliance pathway">落地主体与合规路径</li>
-              <li data-en="Long-term operational support">长期运营对接</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="biz__i">
-          <div class="biz__l">
-            <span class="biz__no">06</span>
-            <div>
-              <h3 data-en="International Medical Events">国际医疗活动组织</h3>
-              <p class="biz__tag" data-en="Delegations · Forums · Exhibitions · Study tours">考察团 · 论坛 · 展会 · 研学</p>
-            </div>
-          </div>
-          <div class="biz__body">
-            <p data-en="We put doctors, institutions and companies from China, Japan and the US at the same table. Itinerary design, institutional bookings, expert invitations, on-site interpretation and hosting — we run the whole chain, with no subcontracting layers.">把中日美三边的医生、机构、企业凑到一张桌子上。从行程设计、机构预约、专家邀请到现场翻译与接待，整条链自己走，不层层转包。</p>
-            <ul class="biz__list">
-              <li data-en="Medical delegations to Japan and the US">日美医疗机构考察团</li>
-              <li data-en="China–Japan medical industry forums">中日医疗产业论坛</li>
-              <li data-en="Exhibition and roadshow organisation">展会参展与路演组织</li>
-              <li data-en="Study tours for physicians and students">医师与医学生研学</li>
-              <li data-en="Corporate health-themed retreats">企业健康主题团建</li>
-              <li data-en="One-to-one institutional matchmaking">一对一机构对接</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-
-      <div class="grp rv">
-        <span class="grp__k" data-en="Practice">修习</span>
-        <span class="grp__d">Practice · Wellbeing</span>
-      </div>
-      <div class="biz rv">
-        <article class="biz__i">
-          <div class="biz__l">
-            <span class="biz__no">07</span>
-            <div>
-              <h3 data-en="Wellbeing Courses">养生课程</h3>
-              <p class="biz__tag" data-en="TCM fundamentals · Constitution typing · Seasonal health">中医基础 · 体质辨识 · 节气养生</p>
-            </div>
-          </div>
-          <div class="biz__body">
-            <p data-en="We teach the part of Chinese medicine you can use yourself. No mysticism — practical: how to tell your own constitution, what to eat this season, how to use food to handle the small recurring complaints of children and elders.">把中医里能自己用的那部分讲明白。不讲玄的，讲能落地的：怎么判断自己是什么体质、这个节气该吃什么、家里老人小孩常见的小毛病怎么用食材调。</p>
-            <ul class="biz__list">
-              <li data-en="Constitution basics (online)">体质辨识入门（线上）</li>
-              <li data-en="Twenty-four solar terms">二十四节气养生</li>
-              <li data-en="Home remedies for common complaints">家庭常见病食疗</li>
-              <li data-en="Hands-on herb identification">中药材辨识实操</li>
-              <li data-en="Seasonal soups and teas">四季汤方与茶饮</li>
-              <li data-en="Food therapy for children and elders">小儿与长辈食养</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="biz__i">
-          <div class="biz__l">
-            <span class="biz__no">08</span>
-            <div>
-              <h3 data-en="Healing Retreats">疗愈课程</h3>
-              <p class="biz__tag" data-en="Mindfulness · Onsen · Forest bathing · Aromatherapy">正念 · 温泉 · 森林浴 · 香疗</p>
-            </div>
-          </div>
-          <div class="biz__body">
-            <p data-en="Nara has what no one can replicate: the mountains of Yoshino, the hot springs of the Kii Peninsula, and thirteen centuries of quiet. Mindfulness, breathwork, aromatherapy and forest bathing simply work better here than in a conference room.">奈良有别人抢不走的条件：吉野的山、纪伊半岛的温泉、一千三百年的安静。把正念、呼吸、香疗和森林浴放在这样的地方做，比在写字楼会议室里有效得多。</p>
-            <ul class="biz__list">
-              <li data-en="Mindfulness and breathwork">正念与呼吸训练</li>
-              <li data-en="Onsen recovery programs">温泉疗养行程</li>
-              <li data-en="Forest bathing in Yoshino">吉野森林浴</li>
-              <li data-en="Sound and aromatherapy">声音与香疗</li>
-              <li data-en="Sleep recovery retreats">睡眠修复营</li>
-              <li data-en="One-to-one healing consultation">一对一疗愈咨询</li>
-            </ul>
-          </div>
-        </article>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- KITCHEN -->
-  <section class="sec sec--paper2" id="kitchen">
+  <section class="sec">
     <div class="wrap">
-      <div class="sec__head rv">
-        <p class="eyebrow">Where It Happens</p>
-        <h2 data-en="The Oji Chinese Cooking Studio">王寺中华料理教室</h2>
-        <p data-en="This is not a concept. It is a real kitchen in Oji, Nara, running classes — and the venue for every offline program.">这不是一个概念。这是奈良王寺一间真实在开课的厨房，也是所有线下课程的场地。</p>
-      </div>
-      <div class="kitchen rv">
-        <div class="kitchen__body">
-          <p data-en="The studio starts with everyday Chinese home cooking. You learn a dish first, then come to understand why it is put together that way — why this ingredient in this season, why more ginger for this constitution, why the same herb behaves differently simmered long versus stir-fried fast.">料理教室以中华家常菜为入口。来的人先学会做一道菜，再慢慢理解这道菜为什么这么配——为什么这个季节吃这个、为什么这个体质的人要多放姜、为什么同一味药材炖久了和炒快了效果不一样。</p>
-          <p data-en="No grand theories in class. The wok is hot, the knife is in your hand, and you taste the result on the spot. If you can cook it at home afterwards, you have learned it.">课上不讲大道理。锅是热的，刀在手上，味道是当场尝到的。学完回家能做，这才算学会。</p>
-          <p data-en="The same room is a kitchen by day, a classroom for wellbeing courses at night, and a private dining room or small healing workshop on weekends.">同一个空间，白天是厨房，晚上可以是养生课的教室，周末可以办私宴和小型疗愈工作坊。</p>
-          <ul class="kitchen__meta">
-            <li>
-              <dt>Location</dt>
-              <dd data-en="Oji, Nara, Japan">日本奈良 · 王寺</dd>
-            </li>
-            <li>
-              <dt>Format</dt>
-              <dd data-en="Small groups, regular schedule; private group bookings available">小班制，定期开课；可承接团体定制</dd>
-            </li>
-            <li>
-              <dt>Content</dt>
-              <dd data-en="Chinese home cooking · seasonal menus · medicinal soups · parent-and-child classes">中华家常菜 · 节气料理 · 药膳汤方 · 亲子厨房</dd>
-            </li>
-            <li>
-              <dt>Language</dt>
-              <dd data-en="Chinese / Japanese">中文 / 日本語</dd>
-            </li>
-          </ul>
+      <div class="split split--wide">
+        <div class="rv">
+          <figure class="founder__fig">
+            <img src="https://hikaruhuimin.github.io/global-health-site/images/kitchen.jpg" alt="中式厨房里正在翻炒的双手" loading="lazy">
+            <figcaption data-en="The cooking classes are run by the founder herself, not a hired chef.">料理课由创始人自己上，不是请来的主厨。</figcaption>
+          </figure>
         </div>
-        <div class="kitchen__card">
-          <span class="kitchen__role">Regular Program</span>
-          <h3 data-en="Course Tracks">常设课程方向</h3>
-          <ul>
-            <li data-en="<strong>Foundation</strong> — four basic home dishes plus knife and prep skills"><strong>入门课</strong>　四道基础家常菜 + 食材处理基本功</li>
-            <li data-en="<strong>Seasonal</strong> — menus built around what is in season"><strong>节气课</strong>　按当季食材设计菜单，跟着节气吃</li>
-            <li data-en="<strong>Medicinal</strong> — soups and braises, each ingredient explained"><strong>药膳课</strong>　汤方与炖品，讲清每味材料的用处</li>
-            <li data-en="<strong>Parent and Child</strong> — cook together, starting with washing vegetables"><strong>亲子课</strong>　带孩子一起做，从洗菜开始</li>
-            <li data-en="<strong>Private Dining</strong> — birthdays, anniversaries, small gatherings"><strong>私宴定制</strong>　生日、纪念日、小型聚会</li>
-            <li data-en="<strong>Group Booking</strong> — corporate teams, institutional visits, themed workshops"><strong>团体包场</strong>　企业团建、机构参访、主题工作坊</li>
-          </ul>
+        <div class="rv">
+          <p class="eyebrow">Founder</p>
+          <h2 style="font-family:var(--serif);font-weight:400;font-size:clamp(23px,3.1vw,34px);line-height:1.42;margin:0 0 18px" data-en="A nephrologist who moved upstream">一个把重心往前移的肾内科医生</h2>
+          <blockquote class="pullquote">
+            <p data-en="In nephrology I met too many people who only started taking their body seriously the day dialysis became unavoidable.">在肾内科，我见过太多人，等到必须透析那天才第一次认真对待自己的身体。</p>
+          </blockquote>
+          <p style="font-size:14.5px;line-height:1.96;color:var(--mute);margin:0 0 14px" data-en="Zhang Huimin — Vicky Zhang — is a physician, trained and practised in nephrology. Kidney disease is quiet for years; by the time symptoms arrive, the function is largely gone. So she moved from treating the end to building the ten years before it.">张慧敏，Vicky Zhang，执业医师，肾内科出身。肾病沉默很多年，等症状出现，功能已经掉了大半。所以她从「治终点」转到「做前面那十年」。</p>
+          <p style="font-size:14.5px;line-height:1.96;color:var(--mute);margin:0 0 22px" data-en="Based in Nara, working in Chinese, Japanese and English. She also runs the medicinal cooking classes herself — standing behind the stove, not introducing the chef.">常驻奈良，中、日、英三语工作。药膳料理课她自己也上——站在灶台后面，不是介绍主厨的那个人。</p>
+          <a class="btn btn--ghost" href="about.html" data-en="Read the full story">看完整故事</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- COURSES -->
-  <section class="sec" id="courses">
-    <div class="wrap">
-      <div class="sec__head rv">
-        <p class="eyebrow">Programs</p>
-        <h2 data-en="How courses and events are structured">课程与活动怎么安排</h2>
-        <p data-en="What can be taught online stays online. What needs hands goes to the studio. What needs going out, we take you there.">线上能讲的线上讲，需要动手的到教室来，需要出门的我们带你去。</p>
-      </div>
-      <div class="tbl-wrap rv">
-        <table class="course">
-          <caption data-en="Program formats at a glance. Schedules and fees are announced per intake.">课程与活动形式一览。具体开课时间与费用，以当期招募通知为准。</caption>
-          <thead>
-            <tr>
-              <th scope="col" data-en="Program">类别</th>
-              <th scope="col" data-en="Format">形式</th>
-              <th scope="col" data-en="For whom">适合谁</th>
-              <th scope="col" data-en="Duration">周期</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-en="Constitution Basics">体质辨识入门</td>
-              <td data-en="Online live + replay">线上直播 + 回放</td>
-              <td data-en="Anyone who wants to know what to eat">想搞清楚自己该吃什么的人</td>
-              <td data-en="90 min, single session">单次 90 分钟</td>
-            </tr>
-            <tr>
-              <td data-en="Seasonal Wellbeing">节气养生课</td>
-              <td data-en="Online + studio practice">线上 + 教室实操</td>
-              <td data-en="Families adjusting diet with the seasons">想跟着节气调整饮食的家庭</td>
-              <td data-en="Monthly">每月一期</td>
-            </tr>
-            <tr>
-              <td data-en="Cooking Studio">中华料理教室</td>
-              <td data-en="Hands-on, Oji, Nara">王寺线下实操</td>
-              <td data-en="Chinese residents in Japan, local students">在日华人 / 日本本地学员</td>
-              <td data-en="Regular small groups">定期开课，小班</td>
-            </tr>
-            <tr>
-              <td data-en="Medicinal Soups">药膳与汤方</td>
-              <td data-en="Hands-on plus ingredient kit">线下实操 + 材料包</td>
-              <td data-en="People managing everyday health">有日常调理需求的人</td>
-              <td data-en="Four sessions">四讲一期</td>
-            </tr>
-            <tr>
-              <td data-en="Mindfulness and Breath">正念与呼吸</td>
-              <td data-en="Offline / online">线下 / 线上</td>
-              <td data-en="People under pressure who do not sleep well">压力大、睡不好的人</td>
-              <td data-en="Four weeks">四周一期</td>
-            </tr>
-            <tr>
-              <td data-en="Forest Bathing and Onsen">森林浴与温泉疗养</td>
-              <td data-en="Nara · Yoshino · Kii Peninsula">奈良 · 吉野 · 纪伊半岛行程</td>
-              <td data-en="People who genuinely need a few days off">需要真正休息几天的人</td>
-              <td data-en="Seasonal">按季组织</td>
-            </tr>
-            <tr>
-              <td data-en="Stem Cell Facility Visit">干细胞机构考察</td>
-              <td data-en="Lab tour plus compliance review">实验室参观 + 资质核验</td>
-              <td data-en="Institutions, investors, private clients">机构方 / 投资方 / 高净值客户</td>
-              <td data-en="Custom">按团定制</td>
-            </tr>
-            <tr>
-              <td data-en="Japan–US Medical Delegation">日美医疗考察团</td>
-              <td data-en="Institutional visits plus expert exchange">机构参访 + 专家交流</td>
-              <td data-en="Hospitals, companies, investors">医疗机构、企业、投资人</td>
-              <td data-en="Custom">按团定制</td>
-            </tr>
-            <tr>
-              <td data-en="Precision Screening Trip">精密体检行程</td>
-              <td data-en="Screening, report review, recovery">体检 + 报告解读 + 休养</td>
-              <td data-en="40+, or with family history">40 岁以上 / 有家族病史</td>
-              <td data-en="2–3 days">2–3 天</td>
-            </tr>
-            <tr>
-              <td data-en="US Medical Access">美国医疗对接</td>
-              <td data-en="Remote consultation plus treatment in the US">远程会诊 + 赴美治疗</td>
-              <td data-en="Those needing US specialists or clinical trials">需要美国专家或临床试验的人</td>
-              <td data-en="Assessed case by case">按病情评估</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY -->
-  <section class="sec sec--ink" id="why">
+  <section class="sec sec--ink">
     <div class="wrap">
       <div class="sec__head rv">
         <p class="eyebrow eyebrow--light">Why Us</p>
-        <h2 data-en="Why us">凭什么是我们</h2>
-        <p data-en="People who do food therapy do not understand medicine. People who do medicine do not think about dinner. This work needs someone standing on both sides.">做食疗的人不懂医疗，做医疗的人不管吃饭。这件事需要一个人同时站在两边。</p>
+        <h2 data-en="Four things that are hard to fake">四件不好装的事</h2>
       </div>
-      <div class="why rv">
-        <div class="why__i">
-          <p class="why__k">01 / Physician-led</p>
-          <h3 data-en="Not a wellness influencer — a practising physician">不是养生博主，是执业医生</h3>
-          <p data-en="We can explain the mechanism behind a food therapy, and judge the boundary of what food cannot fix. That line must not blur.">讲食疗能讲到机理，讲治疗能判断边界。知道什么能靠吃解决，什么必须去医院——这条线不能糊。</p>
+      <div class="facts facts--dark rv">
+        <div class="fact">
+          <p class="fact__k">01</p>
+          <p class="fact__d" data-en="Based in Kansai. Not an agency forwarding emails from another timezone — we go into the institutions ourselves, in Japanese.">关西常驻。不是另一个时区转发邮件的中介——我们自己用日语进机构谈。</p>
         </div>
-        <div class="why__i">
-          <p class="why__k">02 / Three places at once</p>
-          <h3 data-en="Based in Japan, channels in the US, a company in China">日本常驻，美国有渠道，国内有公司</h3>
-          <p data-en="Japanese hospitals, institutions and ingredient sourcing directly; US expert and clinical channels; a real operating entity and team in China. Not a middleman touching neither end.">日本的医院、机构、食材供应直接对接；美国有专家与临床资源渠道；国内有实体公司和落地团队。不是两头都不沾的中间商。</p>
+        <div class="fact">
+          <p class="fact__k">02</p>
+          <p class="fact__d" data-en="A physician on the team. Which means we are more careful, not more willing to make treatment calls.">团队里有医生。这让我们更谨慎，不是更敢替你决定治疗方案。</p>
         </div>
-        <div class="why__i">
-          <p class="why__k">03 / Both ends connected</p>
-          <h3 data-en="Materials, services, treatment — one chain">材料、服务、治疗，是一条链</h3>
-          <p data-en="Ingredients and herbs are materials. Classes and health management are services. Hospitals in Japan and the US are treatment. Others sell one segment; we connect all three.">食材药材是材料，课程和健康管理是服务，日本美国的医院是治疗。别人分段卖，我们接成一整条。</p>
+        <div class="fact">
+          <p class="fact__k">03</p>
+          <p class="fact__d" data-en="Every service was delivered by hand before it was systematised. Nothing is sold that has not been done.">每项服务都先亲手做过，再标准化。没做过的东西不卖。</p>
         </div>
-        <div class="why__i">
-          <p class="why__k">04 / A real place</p>
-          <h3 data-en="A kitchen that actually runs classes">有一间真的在开课的厨房</h3>
-          <p data-en="The Oji studio is not a slide. There is a stove, a wok, and students who keep coming back. Every program grows out of that room.">王寺中华料理教室不是 PPT 里的场景。有锅、有灶、有固定的学员。所有课程和活动都从这里长出来。</p>
+        <div class="fact">
+          <p class="fact__k">04</p>
+          <p class="fact__d" data-en="We say no at the feasibility stage — before you spend money, not after.">在可行性阶段就说不——在你花钱之前，不是之后。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOUNDER -->
-  <section class="sec" id="founder">
+  <section class="sec sec--paper2" id="contact">
     <div class="wrap">
-      <div class="founder rv">
-        <div class="founder__id">
-          <p class="eyebrow">Founder</p>
-          <h2 class="founder__name" data-en="Zhang Huimin">张慧敏</h2>
-          <p class="founder__en">Vicky Zhang</p>
-          <p class="founder__role" data-en="Founder, Global Health · Nephrology-trained physician">Global Health 创始人 · 肾内科出身的执业医师</p>
-          <ul class="founder__tags">
-            <li data-en="Nephrology">肾内科出身</li>
-            <li data-en="From treatment to prevention">从治疗走向预防</li>
-            <li data-en="Chinese / Japanese / English">中日英三语</li>
-            <li data-en="Based in Nara">奈良常驻</li>
-            <li data-en="Oji Cooking Studio">王寺中华料理教室主理</li>
-          </ul>
+      <div class="split">
+        <div class="rv">
+          <p class="eyebrow">Contact</p>
+          <h2 style="font-family:var(--serif);font-weight:400;font-size:clamp(23px,3.1vw,34px);line-height:1.42;margin:0 0 18px" data-en="Tell us the situation first">先说情况，不用说买什么</h2>
+          <p style="font-size:14.5px;line-height:1.96;color:var(--mute);margin:0 0 20px" data-en="Booking, screening, product orders and course enquiries all go through one form. It reaches us directly, and we reply within 24 hours on weekdays.">预约、体检、产品下单、课程咨询，都走同一个表单。直接到我们这里，工作日 24 小时内回。</p>
+          <a class="btn btn--fill" href="contact.html" data-en="Open the form">打开预约表单</a>
         </div>
-        <div class="founder__body">
-          <p class="founder__quote" data-en="In nephrology I met too many people who only started taking their body seriously the day dialysis became unavoidable. The work should have started ten years earlier.">在肾内科，我见过太多人，等到必须透析那天才第一次认真对待自己的身体。这件事本该在十年前就开始做。</p>
-          <p data-en="Trained in nephrology and a practising physician. In clinical practice she saw too many cases that could have been caught far earlier — which is why she moved her focus upstream, from treatment to prevention: manage diet and daily rhythm first, then talk about tests and medication. She has also worked the front line of cross-border care — translating medical records, accompanying patients, negotiating with institutions, following up after treatment.">肾内科出身，执业医师。在临床一线见过太多「本可以更早干预」的病例，于是把重心从治疗往前移，移到预防——先管住每天的饮食和作息，再谈检查和用药。跨境医疗的一线也自己走过：病历翻译、陪诊、机构谈判、术后随访，每一环都亲手做过。</p>
-          <p data-en="What she is building is a platform that runs from materials to services to treatment: ingredients and medicinal herbs are the materials, cooking classes and health management are the services, and medical resources in Japan and the US are the treatment. Most platforms own one segment. The goal is to connect all three into something people can stay with for years.">她想建的，是一个从材料到服务到治疗的健康养生平台：食材与药材是材料，料理课程与健康管理是服务，日本和美国的医疗资源是治疗。多数平台只占其中一段，她要的是把三段接起来，做成一个能长期待下去的地方。</p>
-          <p data-en="Based in Nara, Japan. She runs a Chinese cooking studio in Oji, Nara — moving the question of what to eat out of the consulting room and back into the kitchen. In parallel she works with medical institutions in Japan and the US: precision screening, stem cell treatment, cancer care and technology partnerships.">常驻日本奈良。在奈良王寺开了一间中华料理教室，把「吃什么」这件事从诊室搬回厨房。同时对接日本与美国的医疗资源，做精密体检、干细胞治疗、癌症治疗与技术合作。</p>
-          <p data-en="She works in Chinese, Japanese and English, with operating entities on both sides: Global Health in Japan, and Guangzhou Meixi Information Technology Co., Ltd. in China.">中日英三语，两边都有实体：日本 Global Health，中国广州美西信息科技有限公司。</p>
+        <div class="rv">
+          <dl class="cinfo">
+            <div><dt data-en="WeChat">微信</dt><dd>hikaru0701</dd></div>
+            <div><dt data-en="Japan">日本</dt><dd>+81 90-6299-3772</dd></div>
+            <div><dt data-en="China">中国</dt><dd>+86 186-1719-9792</dd></div>
+            <div><dt data-en="Email">邮箱</dt><dd>info@ghealthorg.com</dd></div>
+            <div><dt data-en="Business">商务</dt><dd data-en="Technology cooperation, licensing and transfer — by email">技术合作 / 技术转让等商务事宜，请发邮件</dd></div>
+            <div><dt data-en="Location">位置</dt><dd data-en="Nara, Japan — Osaka and Kyoto reachable same day">日本奈良，大阪京都当日可达</dd></div>
+          </dl>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="sec sec--paper2" id="faq">
+  <section class="sec sec--tight">
     <div class="wrap">
-      <div class="sec__head rv">
-        <p class="eyebrow">Questions</p>
-        <h2 data-en="Questions we get most">常被问到的几个问题</h2>
+      <div class="next rv">
+        <a href="food.html"><p class="next__k">START</p><p class="next__t" data-en="Food and cooking">食养与料理</p></a>
+        <a href="medical.html"><p class="next__k">START</p><p class="next__t" data-en="Cross-border care">跨境医疗</p></a>
+        <a href="contact.html"><p class="next__k">START</p><p class="next__t" data-en="Booking form">预约表单</p></a>
       </div>
-      <div class="faq rv">
-        <details open>
-          <summary data-en="Are you a food business or a medical business?">你们到底是做餐饮还是做医疗？</summary>
-          <p class="faq__a" data-en="Both, but not as two separate businesses. Ingredients and cooking are the entry point — most health problems can be improved through diet first. Cross-border care is the depth — when you actually need screening or treatment, we have the Japanese and US resources. Courses and events are how we stay with people over time.">都做，但不是两摊生意。食材和料理是入口——大部分人的健康问题，先能从吃上改。跨境医疗是纵深——真需要检查、治疗的时候，我们有日本和美国这边的资源。课程和活动是把人聚起来、长期陪着走的方式。</p>
-        </details>
-        <details>
-          <summary data-en="Can I join if I am not in Japan?">不在日本，能参加吗？</summary>
-          <p class="faq__a" data-en="Online courses are open anywhere. Ingredients can be shipped where customs allows. The cooking studio and healing retreats require coming to Nara; screening and treatment trips require travelling to Japan. Partner venues in China are in preparation.">线上课程不受地域限制。食材可以按需寄送（视海关规定）。线下料理教室和疗愈课程需要到奈良；体检和治疗行程需要赴日。国内的合作场地在筹备中。</p>
-        </details>
-        <details>
-          <summary data-en="How is this different from supplements?">中医食材和普通保健品有什么不一样？</summary>
-          <p class="faq__a" data-en="Supplements are standardised products — the same for everyone. Chinese medicinal ingredients are about fit: the same thing can work in opposite directions depending on your constitution, the season and your current state. So we identify constitution first, then talk about what to eat.">保健品是标准化产品，谁吃都一样。中医食材讲究的是适配——同样的东西，不同体质、不同季节、不同状态下吃，效果可能相反。所以我们先做体质辨识，再谈吃什么。</p>
-        </details>
-        <details>
-          <summary data-en="Japan or the US — how do you choose?">日本和美国，怎么选？</summary>
-          <p class="faq__a" data-en="By condition. Japan is strong in early detection, gastrointestinal cancer, regenerative medicine and proton or heavy-ion therapy, at lower cost, closer, faster visa. The US is strong in new drugs, clinical trials, complex surgery and multidisciplinary consultation, at higher cost and longer timelines. We lay out both options and costs; you decide.">看病情。日本强在早筛、消化道肿瘤、再生医疗和质子重离子，费用相对低、距离近、签证快；美国强在新药、临床试验、复杂手术和多学科会诊，费用高、周期长。我们会把两边的方案和费用都摆出来，你选，不替你决定。</p>
-        </details>
-        <details>
-          <summary data-en="What does a stem cell facility visit involve?">干细胞考察到底看什么？</summary>
-          <p class="faq__a" data-en="The lab, the culture process, the filing documents under the regenerative medicine law, and the case data behind their claims. Not a showroom tour. If a facility cannot produce complete preparation records, we do not refer patients to it.">进实验室看细胞怎么培养，看再生医疗法下的备案文件，看他们宣称效果背后的病例数据。不是看展厅。拿不出完整制备记录的机构，我们不推荐。</p>
-        </details>
-        <details>
-          <summary data-en="What scale of events can you handle?">国际医疗活动能承接多大规模？</summary>
-          <p class="faq__a" data-en="From a dozen-person institutional delegation to a hundred-plus forum. Itinerary, institutional bookings, expert invitations, on-site interpretation and hosting. Proposals are scoped by headcount, theme and budget.">从十几人的机构考察团到百人规模的论坛都可以谈。我们负责行程设计、机构预约、专家邀请、现场翻译与接待。具体方案按人数、主题、预算单独出。</p>
-        </details>
-        <details>
-          <summary data-en="Are the healing courses religious or spiritual?">疗愈课程是宗教或灵修性质的吗？</summary>
-          <p class="faq__a" data-en="No. Mindfulness, breathwork, forest bathing and onsen therapy all have defined methods and observable effects. They are somatic and psychological regulation, not belief. Sessions are led by practitioners with relevant training.">不是。正念、呼吸训练、森林浴、温泉疗养都有明确的做法和可验证的效果，属于身心调节，不涉及信仰。课程由具备相关训练背景的人员带。</p>
-        </details>
-        <details>
-          <summary data-en="What is your relationship with the hospitals?">体检和治疗，你们和医院是什么关系？</summary>
-          <p class="faq__a" data-en="Coordination partners — not a subsidiary, and we do not make medical decisions. Whether a treatment is possible or appropriate is the doctor's call. Our job is to convey the information accurately, including when the doctor says no.">合作对接关系，不是医院下属机构，也不替医院做医疗决策。能不能做某项治疗、适不适合，由医生判断，我们负责把信息准确传达给你，包括医生说「不建议」的时候。</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="contact__glow" aria-hidden="true"></div>
-    <div class="wrap contact__in">
-      <div class="rv">
-        <p class="eyebrow eyebrow--light">Get in Touch</p>
-        <h2 data-en="Tell us what you are trying to solve — then we talk about working together">先说清楚你想解决什么，<br>再谈怎么合作</h2>
-        <p class="contact__lead" data-en="Learning to cook, rebalancing your health, a screening trip, organising an event, launching a course — just say it. The first conversation is free, and you do not need to prepare anything. For technology cooperation and transfer, write to the email address instead.">想学做菜、想调身体、想体检、想组织一场活动、想开一门课——都可以直接说。第一次沟通免费，也不用先交任何资料。技术合作与技术转让，请直接发邮件。</p>
-        <button type="button" class="btn btn--fill" id="copy-wx" data-wx="hikaru0701"><span id="copy-label" data-en="Copy WeChat ID hikaru0701">复制微信号 hikaru0701</span><span class="btn__arw" aria-hidden="true">→</span></button>
-      </div>
-      <dl class="contact__list rv">
-        <li><dt>WeChat</dt><dd>hikaru0701</dd></li>
-        <li><dt>Phone</dt><dd>+81 90-6299-3772</dd></li>
-        <li><dt>Email</dt><dd>info@ghealthorg.com</dd></li>
-        <li><dt>Business</dt><dd data-en="Technology cooperation, licensing and transfer — by email">技术合作 / 技术转让等商务事宜，请发邮件</dd></li>
-        <li><dt>Base</dt><dd data-en="Nara, Japan (meetings available across Osaka, Kyoto and Nara)">日本 · 奈良（大阪 · 京都 · 奈良 圈内可安排面谈）</dd></li>
-        <li><dt>Language</dt><dd data-en="Chinese / Japanese / English">中文 / 日本語 / English</dd></li>
-      </dl>
     </div>
   </section>
 
 </main>
-
 <footer class="foot">
   <div class="foot__in">
     <span>© 2026 Global Health · ghealthorg.com</span>
     <span data-en="This page describes our services and does not constitute medical advice. Diagnosis and treatment plans are subject to assessment by the treating institution.">本页内容为服务说明，不构成医疗建议。具体诊疗方案以医疗机构面诊评估为准。</span>
   </div>
 </footer>
-
 <script>
 (function(){
   "use strict";
   try{
     var nav=document.getElementById("nav");
-    var onScroll=function(){
-      if(!nav) return;
-      nav.classList.toggle("is-solid",window.scrollY>40);
-    };
+    var onScroll=function(){ if(nav){nav.classList.toggle("is-solid",window.scrollY>40);} };
     onScroll();
     window.addEventListener("scroll",onScroll,{passive:true});
 
@@ -787,42 +588,34 @@ table.course tbody tr:hover{background:rgba(154,95,58,.04)}
       if(history.replaceState){history.replaceState(null,"",id);}
     });
 
-    /* ---- language switch ---- */
     var nodes=document.querySelectorAll("[data-en]");
     var cache=[];
     var i;
     for(i=0;i<nodes.length;i++){cache[i]=nodes[i].innerHTML;}
-    var btnZh=document.getElementById("lang-zh");
-    var btnEn=document.getElementById("lang-en");
-    var langBtn=document.getElementById("lang-btn");
-    var titleEl=document.querySelector("title");
-    var TITLE_ZH="Global Health｜中医食材 · 营养料理 · 日美跨境医疗 · 干细胞 · 养生疗愈";
-    var TITLE_EN="Global Health | Chinese Medicine Food · Nutritional Cuisine · Japan & US Medical · Stem Cells · Wellbeing";
-    var current="zh";
+    var bz=document.getElementById("lang-zh");
+    var be=document.getElementById("lang-en");
+    var lb=document.getElementById("lang-btn");
+    var te=document.querySelector("title");
+    var TZ=document.documentElement.getAttribute("data-title-zh")||document.title;
+    var TEN=document.documentElement.getAttribute("data-title-en")||document.title;
+    var cur="zh";
 
-    function applyLang(l){
+    function apply(l){
       for(var k=0;k<nodes.length;k++){
-        var en=nodes[k].getAttribute("data-en");
-        nodes[k].innerHTML=(l==="en")?en:cache[k];
+        nodes[k].innerHTML=(l==="en")?nodes[k].getAttribute("data-en"):cache[k];
       }
       document.documentElement.lang=(l==="en")?"en":"zh-CN";
-      if(titleEl){titleEl.textContent=(l==="en")?TITLE_EN:TITLE_ZH;}
-      if(btnZh){btnZh.style.color=(l==="zh")?"var(--ink)":"";btnZh.style.opacity=(l==="zh")?"1":".45";}
-      if(btnEn){btnEn.style.color=(l==="en")?"var(--ink)":"";btnEn.style.opacity=(l==="en")?"1":".45";}
-      current=l;
+      if(te){te.textContent=(l==="en")?TEN:TZ;}
+      if(bz){bz.style.color=(l==="zh")?"var(--ink)":"";bz.style.opacity=(l==="zh")?"1":".45";}
+      if(be){be.style.color=(l==="en")?"var(--ink)":"";be.style.opacity=(l==="en")?"1":".45";}
+      cur=l;
       try{localStorage.setItem("gh_lang",l);}catch(e){}
     }
+    if(lb){lb.addEventListener("click",function(){apply(cur==="zh"?"en":"zh");});}
+    var sv=null;
+    try{sv=localStorage.getItem("gh_lang");}catch(e){}
+    apply(sv==="en"?"en":"zh");
 
-    if(langBtn){
-      langBtn.addEventListener("click",function(){
-        applyLang(current==="zh"?"en":"zh");
-      });
-    }
-    var saved=null;
-    try{saved=localStorage.getItem("gh_lang");}catch(e){}
-    applyLang(saved==="en"?"en":"zh");
-
-    /* ---- copy wechat ---- */
     var cw=document.getElementById("copy-wx");
     var label=document.getElementById("copy-label");
     if(cw&&label){
@@ -832,13 +625,10 @@ table.course tbody tr:hover{background:rgba(154,95,58,.04)}
         var flash=function(txt,ms){
           label.innerHTML=txt;
           cw.setAttribute("data-copied","1");
-          setTimeout(function(){
-            label.innerHTML=original;
-            cw.removeAttribute("data-copied");
-          },ms);
+          setTimeout(function(){label.innerHTML=original;cw.removeAttribute("data-copied");},ms);
         };
-        var done=function(){flash(current==="en"?"Copied — search in WeChat":"已复制，去微信搜 →",1800);};
-        var fail=function(){flash(current==="en"?"WeChat: hikaru0701":"微信号：hikaru0701",2600);};
+        var done=function(){flash(cur==="en"?"Copied — search in WeChat":"已复制，去微信搜 →",1800);};
+        var fail=function(){flash(cur==="en"?"WeChat: hikaru0701":"微信号：hikaru0701",2600);};
         try{
           if(navigator.clipboard&&navigator.clipboard.writeText){
             navigator.clipboard.writeText(wx).then(done,fail);
@@ -847,15 +637,90 @@ table.course tbody tr:hover{background:rgba(154,95,58,.04)}
       });
     }
 
-    /* ---- reveal ---- */
+    var bk=document.getElementById("booking");
+    if(bk){
+      var ENDPOINT="https://formsubmit.co/ajax/minjie_no1@coze.email";
+      var fItemWrap=document.getElementById("f-item-wrap");
+      var fItem=document.getElementById("f-item");
+      var fTopic=document.getElementById("f-topic");
+      var fmsg=document.getElementById("fmsg");
+      var fsub=document.getElementById("f-submit");
+      var fsubLabel=document.getElementById("f-submit-label");
+
+      try{
+        var qs=new URLSearchParams(location.search);
+        var pre=qs.get("item");
+        if(pre&&fItemWrap&&fItem){
+          fItem.value=pre;
+          fItemWrap.style.display="";
+          if(fTopic){fTopic.value="\u4ea7\u54c1\u8d2d\u4e70";}
+        }
+      }catch(e){}
+
+      var say=function(txt,ok){
+        if(!fmsg){return;}
+        fmsg.textContent=txt;
+        fmsg.className="fmsg "+(ok?"is-ok":"is-err");
+      };
+
+      bk.addEventListener("submit",function(ev){
+        ev.preventDefault();
+        if(!fmsg){return;}
+        var fn=bk.querySelector('[name="name"]');
+        var fc=bk.querySelector('[name="contact"]');
+        var ft=bk.querySelector('[name="topic"]');
+        if(!fn||!fn.value.replace(/\s/g,"")){
+          say(cur==="en"?"Please add a name.":"请填一下称呼。",false);
+          if(fn){fn.focus();}
+          return;
+        }
+        if(!fc||!fc.value.replace(/\s/g,"")){
+          say(cur==="en"?"Please leave a way to reach you.":"请留一个能联系到你的方式。",false);
+          if(fc){fc.focus();}
+          return;
+        }
+        if(!ft||!ft.value){
+          say(cur==="en"?"Please choose a topic.":"请选一个咨询方向。",false);
+          if(ft){ft.focus();}
+          return;
+        }
+
+        fmsg.className="fmsg";
+        fmsg.textContent=cur==="en"?"Sending…":"正在提交…";
+        if(fsub){fsub.disabled=true;}
+        if(fsubLabel){fsubLabel.innerHTML=cur==="en"?"Sending…":"提交中…";}
+
+        var fd=new FormData(bk);
+        fetch(ENDPOINT,{method:"POST",body:fd,headers:{"Accept":"application/json"}})
+          .then(function(r){return r.json();})
+          .then(function(d){
+            var ok=d&&(d.success==="true"||d.success===true);
+            if(ok){
+              bk.reset();
+              if(fItemWrap){fItemWrap.style.display="none";}
+              say(cur==="en"?"Sent. We reply within 24 hours on weekdays — usually sooner.":"已收到。工作日 24 小时内回复，通常更快。",true);
+            }else{
+              say(cur==="en"?"Could not send. Please add WeChat hikaru0701 instead.":"没发出去。请直接加微信 hikaru0701。",false);
+            }
+          })
+          .catch(function(){
+            say(cur==="en"?"Could not send. Please add WeChat hikaru0701 instead.":"没发出去。请直接加微信 hikaru0701。",false);
+          })
+          .then(function(){
+            if(fsub){fsub.disabled=false;}
+            if(fsubLabel){fsubLabel.innerHTML=cur==="en"?"Send":"\u63d0\u4ea4";}
+          });
+      });
+    }
+
     var items=document.querySelectorAll(".rv");
     if(!("IntersectionObserver" in window)){
       for(i=0;i<items.length;i++){items[i].classList.add("is-in");}
       return;
     }
-    var io=new IntersectionObserver(function(entries){
-      entries.forEach(function(en){
-        if(en.isIntersecting){en.target.classList.add("is-in");io.unobserve(en.target);}
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(x){
+        if(x.isIntersecting){x.target.classList.add("is-in");io.unobserve(x.target);}
       });
     },{rootMargin:"0px 0px -8% 0px",threshold:0.06});
     for(i=0;i<items.length;i++){io.observe(items[i]);}

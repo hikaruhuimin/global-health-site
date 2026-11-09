@@ -161,7 +161,7 @@ table.dt tbody tr:hover{background:rgba(139,124,246,.04)}
 button.btn{font:inherit;cursor:pointer;border:none;background:transparent;color:inherit}
 .btn--fill{background:var(--zhe);color:#fff}
 .btn--fill:hover{background:var(--zhe-l)}
-.btn--ghost{border-color:rgba(150,140,255,.34);color:var(--ink)}
+.btn--ghost{border-color:rgba(150,140,255,.34);color:var(--ink);background:transparent}
 .btn--ghost:hover{border-color:rgba(150,140,255,.72);background:rgba(150,140,255,.10)}
 .btn--ink{border-color:var(--ink);color:var(--ink)}
 .btn--ink:hover{background:var(--ink);color:var(--paper)}
@@ -424,6 +424,8 @@ main,footer{position:relative;z-index:1}
 /* 标题质感 */
 .hero h1,.phero h1{text-shadow:0 0 70px rgba(120,100,255,.4)}
 .hero h1 em,.phero h1 em{color:#b3a6ff;text-shadow:0 0 46px rgba(140,110,255,.7)}
+.hero h1 em,.phero h1 em{white-space:nowrap}
+@media (max-width:400px){.hero h1{font-size:clamp(26px,7.6vw,32px);line-height:1.28}}
 .hero__bg img{opacity:.5;filter:saturate(.78) contrast(1.04)}
 .hero__bg::after{background:linear-gradient(180deg,rgba(7,6,26,.80) 0%,rgba(7,6,26,.48) 40%,rgba(7,6,26,.96) 100%)}
 .banner img,.entry__img img,.pcard__img img,.prog__media img{filter:saturate(.86) contrast(1.03)}
@@ -462,6 +464,37 @@ main,footer{position:relative;z-index:1}
   .nav__links a::after{display:none}
   .nav__cta{display:block;margin:16px var(--gut) 0;padding:13px 16px !important;text-align:center}
 }
+
+/* ==== 窄屏导航修复：汉堡可见 + 菜单不透明 ==== */
+@media (max-width:1080px){
+  .nav__links{
+    top:62px;
+    background:#0a0820;
+    -webkit-backdrop-filter:none;backdrop-filter:none;
+    box-shadow:0 26px 60px -18px rgba(0,0,0,.75);
+    border-bottom:1px solid rgba(150,140,255,.18);
+  }
+  body.nav-open{overflow:hidden}
+}
+@media (max-width:720px){
+  .nav__in{height:60px;gap:10px;padding:0 16px}
+  .brand{gap:0;flex:0 1 auto;min-width:0;overflow:hidden}
+  .brand__mark{font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .brand__sub{display:none}
+  .nav__right{gap:9px;flex:none}
+  .lang{padding:5px 8px;font-size:10.5px;letter-spacing:.04em;white-space:nowrap;gap:4px;flex:none;line-height:1.5}
+  .lang b,.lang span{white-space:nowrap}
+  .burger{width:34px;height:34px;flex:none}
+  .nav__links{top:60px}
+  .nav__links a:not(.nav__cta){padding:14px 20px;font-size:15px}
+  .nav__cta{margin:14px 20px 0}
+}
+@media (max-width:400px){
+  .brand__mark{font-size:15px}
+  .lang{font-size:10px;padding:4px 7px}
+  .burger{width:32px;height:32px}
+}
+
 
 /* 深色表单细节 */
 ::placeholder{color:rgba(168,163,208,.6);opacity:1}
@@ -863,17 +896,25 @@ main,footer{position:relative;z-index:1}
     var burger=document.getElementById("burger");
     var navLinks=document.getElementById("nav-links");
     if(burger&&navLinks){
-      burger.addEventListener("click",function(){
-        var open=navLinks.classList.toggle("is-open");
+      var setMenu=function(open){
+        navLinks.classList.toggle("is-open",open);
         burger.classList.toggle("is-open",open);
         burger.setAttribute("aria-expanded",open?"true":"false");
+        document.body.classList.toggle("nav-open",open);
+      };
+      burger.addEventListener("click",function(ev){
+        ev.preventDefault();
+        ev.stopPropagation();
+        setMenu(!navLinks.classList.contains("is-open"));
       });
       navLinks.addEventListener("click",function(ev){
-        if(ev.target.tagName==="A"){
-          navLinks.classList.remove("is-open");
-          burger.classList.remove("is-open");
-          burger.setAttribute("aria-expanded","false");
-        }
+        if(ev.target.tagName==="A"){setMenu(false);}
+      });
+      document.addEventListener("keydown",function(ev){
+        if(ev.key==="Escape"&&navLinks.classList.contains("is-open")){setMenu(false);}
+      });
+      window.addEventListener("resize",function(){
+        if(window.innerWidth>1080&&navLinks.classList.contains("is-open")){setMenu(false);}
       });
     }
 

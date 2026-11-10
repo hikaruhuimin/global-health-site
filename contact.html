@@ -255,6 +255,11 @@ tbody tr:last-child td{border-bottom:0}
 .chain{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(14px,2.2vw,26px)}
 .chain__i{border:1px solid var(--line);padding:clamp(22px,2.6vw,32px);background:var(--paper)}
 .chain__k{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--zhe);margin-bottom:12px}
+.chain__n{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--zhe);margin-bottom:12px}
+.chain__t{margin:14px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--zhe-l);line-height:1.7}
+.tl__d{grid-column:1;grid-row:1 / span 3;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--zhe);padding-top:5px;line-height:1.6}
+.tl h3,.tl p{grid-column:2}
+@media (max-width:620px){.tl{grid-template-columns:1fr;gap:6px}.tl__d{grid-column:1;grid-row:auto}}
 .chain__i h3{font-family:var(--serif);font-weight:400;font-size:19px;margin:0 0 9px}
 .chain__i p{margin:0;font-size:13.5px;line-height:1.86;color:var(--mute)}
 
@@ -289,6 +294,7 @@ tbody tr:last-child td{border-bottom:0}
 
 /* entry cards */
 .entries{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:clamp(14px,2.2vw,26px)}
+.entries>.entry:last-child:nth-child(3n+1){grid-column:2 / span 1}
 .entry{position:relative;border:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column;overflow:hidden;transition:border-color .35s ease}
 .entry:hover{border-color:rgba(139,124,246,.55)}
 .entry__img{aspect-ratio:16/10;overflow:hidden;background:var(--paper-3)}
@@ -528,6 +534,7 @@ main,footer{position:relative;z-index:1}
         <a href="food.html" data-en="Food">食养</a>
         <a href="medical.html" data-en="Medical">跨境医疗</a>
         <a href="stemcell.html" data-en="Stem Cells">干细胞</a>
+        <a href="longevity.html" data-en="Longevity">长寿医疗</a>
         <a href="business.html" data-en="Partnership">商务合作</a>
         <a href="courses.html" data-en="Programs">课程</a>
         <a href="product.html" data-en="Products">产品</a>

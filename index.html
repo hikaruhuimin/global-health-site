@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="zh-CN" data-title-zh="Global Health｜中医食材 · 营养料理 · 日美跨境医疗 · 干细胞 · 养生疗愈" data-title-en="Global Health | Chinese Medicine Food · Nutritional Cuisine · Japan & US Medical · Stem Cells · Wellbeing">
+<html lang="zh-CN" data-title-zh="Global Health｜中医食材 · 营养料理 · 日美跨境医疗 · 干细胞 · 长寿医疗 · 养生疗愈" data-title-en="Global Health | Chinese Medicine Food · Nutritional Cuisine · Japan & US Medical · Stem Cells · Longevity · Wellbeing">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Global Health｜中医食材 · 营养料理 · 日美跨境医疗 · 干细胞 · 养生疗愈</title>
-<meta name="description" content="Global Health 在中国深圳、美国加州、日本大阪奈良三地运营，做中医食材、营养料理、日美跨境医疗、干细胞考察与治疗、技术合作与转让、国际医疗活动组织与养生疗愈课程。">
+<title>Global Health｜中医食材 · 营养料理 · 日美跨境医疗 · 干细胞 · 长寿医疗 · 养生疗愈</title>
+<meta name="description" content="Global Health 在中国深圳、美国加州、日本大阪奈良三地运营，做中医食材、营养料理、日美跨境医疗、干细胞考察与治疗、长寿医疗与生物年龄管理、技术合作与转让、国际医疗活动组织与养生疗愈课程。">
 <style>
 :root{
   --ink:#eceaff;--ink-2:#f7f5ff;--ink-3:#d6d1ff;
@@ -255,6 +255,11 @@ tbody tr:last-child td{border-bottom:0}
 .chain{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(14px,2.2vw,26px)}
 .chain__i{border:1px solid var(--line);padding:clamp(22px,2.6vw,32px);background:var(--paper)}
 .chain__k{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--zhe);margin-bottom:12px}
+.chain__n{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--zhe);margin-bottom:12px}
+.chain__t{margin:14px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--zhe-l);line-height:1.7}
+.tl__d{grid-column:1;grid-row:1 / span 3;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--zhe);padding-top:5px;line-height:1.6}
+.tl h3,.tl p{grid-column:2}
+@media (max-width:620px){.tl{grid-template-columns:1fr;gap:6px}.tl__d{grid-column:1;grid-row:auto}}
 .chain__i h3{font-family:var(--serif);font-weight:400;font-size:19px;margin:0 0 9px}
 .chain__i p{margin:0;font-size:13.5px;line-height:1.86;color:var(--mute)}
 
@@ -289,6 +294,7 @@ tbody tr:last-child td{border-bottom:0}
 
 /* entry cards */
 .entries{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:clamp(14px,2.2vw,26px)}
+.entries>.entry:last-child:nth-child(3n+1){grid-column:2 / span 1}
 .entry{position:relative;border:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column;overflow:hidden;transition:border-color .35s ease}
 .entry:hover{border-color:rgba(139,124,246,.55)}
 .entry__img{aspect-ratio:16/10;overflow:hidden;background:var(--paper-3)}
@@ -528,6 +534,7 @@ main,footer{position:relative;z-index:1}
         <a href="food.html" data-en="Food">食养</a>
         <a href="medical.html" data-en="Medical">跨境医疗</a>
         <a href="stemcell.html" data-en="Stem Cells">干细胞</a>
+        <a href="longevity.html" data-en="Longevity">长寿医疗</a>
         <a href="business.html" data-en="Partnership">商务合作</a>
         <a href="courses.html" data-en="Programs">课程</a>
         <a href="product.html" data-en="Products">产品</a>
@@ -596,7 +603,7 @@ main,footer{position:relative;z-index:1}
       <div class="sec__head rv">
         <p class="eyebrow">Services</p>
         <h2 data-en="What we actually do">我们具体做什么</h2>
-        <p data-en="Six lines of work. Each has its own page with the detail, the price range and the way to start.">六条线。每条都有自己的页面，写清细节、价格区间，以及怎么开始。</p>
+        <p data-en="Seven lines of work. Each has its own page with the detail, the price range and the way to start.">七条线。每条都有自己的页面，写清细节、价格区间，以及怎么开始。</p>
       </div>
       <div class="entries rv">
         <a class="entry" href="food.html">
@@ -644,10 +651,19 @@ main,footer{position:relative;z-index:1}
             <span class="entry__go" data-en="Visit from ¥80,000">考察 ¥80,000 起</span>
           </div>
         </a>
+        <a class="entry" href="longevity.html">
+          <div class="entry__img"><img src="https://hikaruhuimin.github.io/global-health-site/images/scan.jpg" alt="医学影像检查设备" loading="lazy"></div>
+          <div class="entry__b">
+            <span class="entry__k">Treatment · 06</span>
+            <h3 data-en="Longevity">长寿医疗</h3>
+            <p data-en="Biological age baseline, organ screening, hormone and metabolic review, then four layers of intervention and quarterly retesting. Numbers first, products later.">生物年龄基线、器官筛查、荷尔蒙与代谢评估，四层干预加季度复测。先有数字，再谈产品。</p>
+            <span class="entry__go" data-en="Baseline from ¥450,000">基线 ¥450,000 起</span>
+          </div>
+        </a>
         <a class="entry" href="business.html">
           <div class="entry__img"><img src="https://hikaruhuimin.github.io/global-health-site/images/kitchen.jpg" alt="中式厨房中炒菜的双手" loading="lazy"></div>
           <div class="entry__b">
-            <span class="entry__k">Business · 06</span>
+            <span class="entry__k">Business · 07</span>
             <h3 data-en="Partnership">技术合作</h3>
             <p data-en="Technology equity, licensing, joint ventures, OEM — plus international medical delegations, forums and study programmes.">技术入股、许可、合资、OEM，以及国际医疗考察团、论坛与研修。</p>
             <span class="entry__go" data-en="By email">商务走邮箱</span>
